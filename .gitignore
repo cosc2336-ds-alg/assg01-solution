@@ -10,3 +10,6 @@ test
 TODO.md
 Makefile.pandoc
 .vagrant/*
+html/*
+latex/*
+.vscode/*
