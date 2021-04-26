@@ -3,10 +3,10 @@
  *
  * @author Jane Programmer
  * @note   cwid : 123 45 678
- * @note   class: COSC 2336, Summer 2020
- * @note   ide  : Atom Text Editor 1.46.0 / build package / GNU gcc tools
+ * @note   class: COSC 2336, Summer 2021
+ * @note   ide  : VS Code Server 3.9.3 
  * @note   assg : Assignment 01
- * @date   June 1, 2020
+ * @date   June 1, 2021
  *
  * Assignment 01, practice on functions, user defined types and arrays.  This is
  * the header file for the assignment 01 functions.  The function prototypes for

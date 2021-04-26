@@ -1,12 +1,11 @@
 /** @file assg01-tests.cpp
  * @brief Unit tests for Assignment 01, practice on functions.
  *
- * @author Jane Programmer
- * @note   cwid : 123 45 678
- * @note   class: COSC 2336, Summer 2020
- * @note   ide  : Atom Text Editor 1.46.0 / build package / GNU gcc tools
+ * @author Derek Harter
+ * @note   class: COSC 2336, Summer 2021
+ * @note   ide  : VS Code Server 3.9.3 
  * @note   assg : Assignment 01
- * @date   June 1, 2020
+ * @date   June 1, 2021
  *
  * Assignment 01, practice on functions, user defined types and arrays.  This is
  * the file containing the unit tests for this assignment.  It uses the catch2
