@@ -17,7 +17,6 @@
  */
 #include <cmath>
 #include <iostream>
-#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "assg01-functions.hpp"
 using namespace std;

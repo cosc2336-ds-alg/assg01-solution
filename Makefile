@@ -1,7 +1,8 @@
 # source files in this project (for beautification)
 PROJECT_NAME=assg01
 
-test_src  = $(PROJECT_NAME)-tests.cpp \
+test_src  = tests-main.cpp \
+	    $(PROJECT_NAME)-tests.cpp \
 	    assg01-functions.cpp
 debug_src = $(PROJECT_NAME)-main.cpp \
 	    assg01-functions.cpp
