@@ -1,15 +1,17 @@
 ---
 title: 'Assignment 01: Review of Functions and Arrays'
 author: 'COSC 2336: Data Structures and Algorithms'
-date: 'Fall 2021'
+date: Summer 2021'
 ---
 
 
 # Objectives
-- Practice using `<cmath>` predefined functions
 - Review and practice writing user defined functions
+- Learn about code reuse through reusing user defined functions.
 - Review of arrays in C
 - Practice passing arrays into functions
+- Practice using `<cmath>` predefined library functions
+- Continue learning about test driven development and git project workflow
 
 # Description
 
@@ -58,203 +60,323 @@ s &= \sqrt{\frac{1}{n} \big[ (x_0 - \bar{x})^2 + (x_1 - \bar{x})^2 + (x_2 - \bar
   &\approx 2.4819
 \end{align*}
 
+We will be emphasizing the writing and reuse of functions in this assignment.
+You will build several smaller functions that will be reused to do most of the
+work of the functions to calculate the mean and standard deviation.
 
-# Setup
+# Overview and Setup
 
-For this assignment you will be given the following files:
+For this assignment you will be given the following files that you will be
+using and adding code to for this assignment.
 
-| File Name                 | Description                         |
-|---------------------------|-------------------------------------|
-| `assg01-tests.cpp`        | Unit tests for the two functions    |
-|                           | you are to write.                   |
-| `assg01-functions.hpp`    | Header file for function prototypes |
-|                           | you are to add.                     |
-| `assg01-functions.cpp`    | Implementation file for the         |
-|                           | functions you are to write for      |
-|                           | this assignment.                    |
+| File Name                      | Description                         |
+|--------------------------------|-------------------------------------|
+| `src/assg01-tests.cpp`         | Unit tests for the five functions   |
+|                                | you are to write.                   |
+| `include/assg01-functions.hpp` | Header file for function prototypes |
+|                                | you are to add.                     |
+| `src/assg01-functions.cpp`     | Implementation file for the         |
+|                                | functions you are to write for      |
+|                                | this assignment.                    |
 
-Set up a multi-file project to compile the two `.cpp` source files
-together and run them as shown for the class.  The `Makefile` you were
-given should be usable to create a build project using the Atom editor
-as required in this class.  The general approach you should take for
-this assignment, and all assignment is:
+As usual, before starting on the assignment tasks proper, you will need to
+finish the following setup steps.
 
-1. Set up your project with the given starting templates.  The files
-   should compile and run, but either no tests will be run, or tests
-   will run but be failing.
-2. For this project, start by uncommenting the first `TEST_CASE` in
-   the `assg01-tests.cpp` file.  These are the unit tests to test
-   the functionality of your function to calculate the mean of an
-   array of integer values.  When you uncomment this first unit test
-   case, your program will no longer be able to compile, because you
-   have not yet written the `calculateMean()` function.
-3. Add the correct function prototype for your `calculateMean()`
-   function to the `assg01-functions.hpp` header file.  The
-   prototype consists of the name of the function, its input
-   parameters and their types, and the return value of the function.
-4. Add a stub/empty implementation of `calculateMean()` to your own
-   `assg01-functions.cpp` implementation file.  The function should
-   have the same signature as the prototype you gave in the header
-   file.  The function should initially just return a result of 0.0
-   since this is a value returning function that returns a double
-   value as a result.
-5. Your code should compile and run now.  Make sure after adding the
-   function prototype and stub your code compiles and runs.  However,
-   some but not all of the unit tests will now be passing, and most
-   will be failing.
-6. Incrementally implement the functionality of your `calculateMean()`
-   function.  You should try to add no more than 2 or 3 lines of code,
-   and then make sure you program still compiles and runs.  Start by
-   adding code to get the first failing test to pass.  Then once that
-   test passes, move on to the next failing tests until you have all
-   tests passing.  If you write something that causes a previously
-   passing test to fail, you should stop and figure out why, and
-   either fix it so that the original test still passes, or remove
-   what you did and try a new approach.
-7. Once you have the `calculateMean()` function implemented and all
-   unit tests passing, you should then move on to the
-   `calculateStandardDeviation()` function.  Your approach should be
-   the same.  Start by uncommenting the second `TEST_CASE` and making
-   sure code still compiles after adding your function prototype to
-   the header file and a stub/empty function to the implementation
-   file.  Then incrementally add code to this function, recompiling
-   often and paying attention to which unit tests are passing and
-   which are failing while implementing the function.
-
-# Tasks
-You should set up your project/code as described in the previous
-section.  In this section we give some more details on implementing
-the two functions you are to write for this assignment.  You should
-perform the following tasks for this assignment, once you have your
-project set up and building:
-
-1. Implement the function named `calculateMean()`.  You should already
-   have a stub of this function that compiles and returns a result of
-   0.0 before starting to implement the function.  This function takes
-   two parameters, an integer indicating the size of the array of
-   values ($n$), and an array of integers.  This function will return
-   a value of type `double`.  The signature and name of the function
-   should match how it is tested in the unit tests file.  The function
-   should calculate the mean for any array of 1 or more integer values
-   passed in to it, as described above.  The function should calculate the
-   mean using `double` valued precision, because even though the values
-   are integers, the calculated mean can often be a non integer result.
-   **HINT**: be careful about integer division.  If you sum up the values
-   in the array as an integer sum, and you divide by an integer, the result
-   by default in C/C++ will be an integer.  You need to cast one or both
-   values to a double value when performing the division to get a double
-   result.
-
-2. Implement a second function named `calculateStandardDeviation()`.
-   You should not start on this function until your `calculateMean()`
-   function is completely working, as you are required to reuse your
-   first function in the implementation of this function.  You should
-   start like before, by first making sure your program compiles and
-   runs when you uncomment the unit tests after adding the function
-   prototype and a stub that returns a value of 0.0. This function
-   takes the same two parameters, the size of the array of values
-   ($n$) and an array of integers.  This function will also return a
-   double result.  The function will calculate and return the standard
-   deviation of any array of integers of any size passed to it.  Some
-   further requirements of this function.  You must demonstrate the
-   use of predefined functions from `<cmath>` such as the `pow()` and
-   `sqrt()` functions.  Also, you must call the `calculateMean()`
-   function from this function, e.g. do not repeat the calculation of
-   the mean value, but reuse your previous function to do this work to
-   obtain $\bar{x}$.
-
-
-# Example Output
-Here is the correct output you get from your program
-if you correctly implement the two functions and successfully
-pass all of the unit tests given for this assignment.  If you
-invoke your function with no command line arguments, only failing
-tests are usually shown by default.  In the second example, we use the
-`-s` command line option to have the unit test framework show both
-successful and failing tests, and thus we get reports of all of the
-successfully passing tests as well on the output.
-
-```
-$ ./test
-===============================================================================
-All tests passed (24 assertions in 2 test cases)
+1. Copy the assignment repository on GitHub using the provided assignment
+   invitation link for assg01 for our current class semester and section.
+2. Clone the repository using the SSH url to your local class DevBox
+   development environment.
+3. Checkout the 'origins/feedback' branch to your locak working DevBox
+   repository.
+4. Confirm that the project builds and runs, though no tests will be
+   defined or run initially.  If the project does not build on the first
+   checkout, please inform the instructor.
+5. You should create the issue for Task 1 and/or for all tasks for the assignment
+   now before beginning the first task.  On your GitHub account, go to issues,
+   and create it/them from the issue templates for the assignment.  Also you
+   should close the initial Pull request that should be automatically
+   opened for you, so that you can open your own when commiting your work.
 
 
 
-# using the -s option to show successful check/assertions
-$ ./test -s
 
--------------------------------------------------------------------------------
-assg01 is a Catch v2.7.2 host application.
-Run with -? for options
+# Assignment Tasks
 
--------------------------------------------------------------------------------
-<calculateMean()> function tests
-  test array of 1 item
--------------------------------------------------------------------------------
-assg01-tests.cpp:35
-...............................................................................
+## Task 1: Implement `sumOfValues()` Function
 
-assg01-tests.cpp:38: PASSED:
-  CHECK( calculateMean(1, x) == Approx(3.0) )
-with expansion:
-  3.0 == Approx( 3.0 )
+If you haven't already, create the Task 1 issue on GitHub and close
+the initial Pull request if it is still open.
 
-... output snipped ...
+For the first task, you will implement a function named `sumOfValues()`.
+This function will take an array of double values, sum up all of the
+values in the array, and return the sum as a double result.  Notice by
+looking at the tests that this function, like all of the functions you
+will write, actually takes first an integer parameter, which is the
+number of values in the array that will be passed in as the second
+parameter.
 
-===============================================================================
-All tests passed (24 assertions in 2 test cases)
-```
+As usual a good first baby step is to uncomment the first test case for
+the `sumOfValues()` unit tests.  Then create the function prototype
+for your function, and create a stub implementation that returns
+a sum of `0.0`.  Make sure that these changes compile and the
+tests you uncommented run, though of course you won't expect
+them to be passing yet.  When you have code that compiles and runs
+again, this is a good milestone to stage and commit your changes, and
+push them to your `feedback` branch.  You could then create your
+new pull request for your Task 1 and associate this new pull
+request with the Issue 1 for this task you should have.
+
+Once you are past the hurdle of adding in the function
+prototype and stub implementation, you can begin implementing the
+function in earnest.  In future assignment descriptions we will
+probably skip the description of adding the funciton prototype
+and a stub function so that you can get the tests running, and will
+assume that you do this as the first step for most all of the
+assignment tasks.
+
+The `sumOfValues()` function should be relatively simple to
+implement hopefully.  There are several tests that test
+summing up arrays of various size in the given unit tests.
+Your implementation needs to sum up all of the values and reuturn
+the resulting sum as a `double` data type.  The unit tests do test
+some edge cases, like for example what if you are given an array
+of size 0 (an empty array), do you return a default sum of 0.0 in that
+case?
+
+Once you have the function working, you should stage and push
+a commit to the `feedback` branch of your work that passes all of the
+unit tests for this first task function.  It may not be needed for this
+task, but in general if you reach a milestone or solve some subproblem,
+even if you are not completely done with the task yet, you should
+create a commit and push it with an appropriate commit message
+describing the sub-milestone.  Though be careful to always make sure
+that your code does compile and run the tests before commiting, 
+you may have points removed if you push commits that break the build.
+
+You can / should close the pull request and merge your changes with
+the main branch once you are satisfied your first task is working correctly.
+Though do not delete the feedback branch, as you should continue 
+working on it to implement the rest of the tasks.
+
+## Task 2: Implement `calculateMean()` Function
+
+Make sure that you have created Issue 2 for this task.  And it would be best
+to close your first pull request, so you can create one just for the
+implementation of this issue.
+
+As usual, create the function prototype and a stub, and uncomment the
+tests for task 2, to make sure your project still compiles and can now run
+the unit tests that you need to pass for this task 2.
+
+`calculateMean()` will have the same signature as your first function.
+The function should take an array of `double`, and calculate the
+mean of these values, returning their mean as a `double` result.
+
+You are required to reuse the `sumOfValues()` function in order
+to implement your task 2 `calculateMean()` function.  As discussed
+in the assignment description, the mean is simply the sum of the values
+divided by the total number of values being averaged.  So you can reuse
+the first function to determine the sum of the values that you are calculating
+the average of.
+
+**NOTE**: be careful about integer division.  Since the number of values
+in the array is given to you as an integer, you have to divide by this
+to get your average.  Sometimes, when you divide by an integer in
+C/C++ you end up with an integer result.  You should google
+integer division in C/C++ if you do not know what the potential issue
+is here with dividing by an integer data type.
+
+When you are satisfied your function works (make sure your project 
+compiles and runs still), you should commit your changes and push them to the
+repository, and then document with your pull request and merge 
+the changes to main.
+
+## Task 3: Implement 'differentOfValues()` Function
+
+Make sure you do your prerequesite steps first, such as creating the issue
+for this task, and making sure the previous issue and pull request are closed
+before starting this task.  Then uncomment the tests for this function, and
+get your project back to a compilable and runable state before proceeding.
+
+If you look closely at the definition of the standard deviation, we can break
+it up into several steps.  First of all, the standard deviation is calculated by taking the
+difference of each value with the mean.  Thene all of the differences are squared.
+The standard deviation is actually the mean of these squared differences, e.g. if we
+calculate the square of the difference of each value with the mean, then take the
+average of these squared differences, then we have the standard deviation (after we
+take a final square root of this calculation).
+
+So to calculate the standard deviation, we want to reuse the `calculateMean()` function,
+and we want to create some other smaller functions we can use in that calculation and
+potentially reuse in other ways.
+
+The `differenceOfValues()` function works a bit differently from the previous two.
+We need to pass in an array of `double` values (and the array size) as before.  But you
+will pass in a third parameter of type `double`.  This value is the value you are to subtract
+from each of the values in the array passed as the second parameter.
+
+This function is a `void` function this time, which is different as well.  You will be
+calculating the difference of each value, and storing the result back in the array
+passed in as a parameters.  As you should have learned/reviewed from this units materials,
+arrays are passed in by reference implicitly.  So if you modify the values of the
+array to contain the calculated differences, the results of this calculation will be returned
+back to the caller of your function.
+
+When you are satisfied your function is working, the project still compiles, and you can
+run and pass the tests, perform the usual to create and push a commit to the feedback
+branch, close the pull request for Task 3 and close Issue 3, and merge these changes
+into the main branch.
+
+## Task 4: Implement 'squareOfValues()' Function
+
+Perform the usual prerequisite steps before starting task 4.
+
+Once you have your program running the tests again, implement the
+`squareOfValues()` function.  This function will work in a similar
+manner to the previous function.  It is a void function because the work
+it does is done on the values of the array passed in as a parameter.  
+This function simply squares all of the values in the array, so there will
+be no third parameter for this function, simply the array of doubles (and
+the array size) passed in as the 2 input parameters.  But like before this
+is a void function because the results will be stored back in the array
+to be returned to the caller by reference.
+
+**NOTE**: you are required to use the `pow()` function from the `cmath`
+C/C++ library to implement the squaring calculation of each element. 
+You could calculate the square by multiplying each value by itself.  But this
+is not as clear as explicitly using a `pow()` function to square each value.
+Also you are practicing code reuse here still, and you should always reuse
+function from the standard libraries in the language you are programming with
+where available and where these make your code clearer and more readable.
+
+When satisfied with your implementation, commit and push you change, and close
+the pull request and issue.
+
+## Task 5: Implement 'calculateStandardDeviation()' Function
+
+Perform the usual prerequisite steps before starting task 5.
+
+The final task will be to put together and reuse all of the previous 
+functions to implement the standard deviation calculation.  You will be using
+all 4 of the previous functions, as well as the `cmath` `sqrt()` function,
+either directly or indirectly here.
+
+This function has the same signature as the `calculateMean()` function.
+It takes an array of `double` values and its size as input parameters.
+And it returns a `double` result, which should be the final calculated
+standard deviation of the original array of values.
+
+If all of your previous functions are working, you can implement the
+calculation of the standard deviation in the following manner.
+
+1. Calculate the mean of the initial values in the array by reusing
+   your `calculateMean()` function.
+2. Calculate the difference of each value in the array of values from the
+   mean value by calling your `differenceOfValues()` function.
+3. Calculate the square of each of the differences with your
+   `squareOfValues()` function.
+4. Calculate the mean of the squared differences using the `calculateMean()`
+   again.  Notice you are (re)using this function 2 times in the implementation
+   of your standard deviation calculation.
+5. The final result then is the square root of the mean of these squared differences.
+   So you are require to use the `sqrt()` function from `cmath` to get the square root
+   of this result.  This should be the final standard deviation that your function
+   will return.
+   
+If you have gotten all of the tasks completed to this point, you should be able to
+run and pass all of the original tests once your `calculateStandardDeviation()`
+is working correctly.  When satisfied you should commit and push your changes.
+
+
 
 
 
 # Assignment Submission
 
-A MyLeoOnline submission folder has been created for this assignment.
-There is a target named `submit` that will create a tared and gziped
-file named `assg01.tar.gz`. You should do a `make submit` when finished
-and upload your resulting gzip file to the MyLeoOnline Submission
-folder for this assignment.
+For this class, the submission process is to correctly create a pull
+request(s) with changes committed and pushed to your copied repository
+for grading and evaluation.  For the assignments, you may not be able
+to complete all tasks and have all of the tests successfully
+finishing.  This is ok.  However, you should endeavor to have as many
+of the tasks completed before the deadline for the assignment as
+possible.  Also, try and make sure that you only push commits that are
+building and able to run the tests.  You may loose points for pushing 
+a broken build, especially if the last build you submit is not
+properly compiling and running the tests.
 
-```
-$ make submit
-tar cvfz assg01.tar.gz assg01-tests.cpp assg01-main.cpp assg01-functions.hpp assg01-functions.cpp
-assg01-tests.cpp
-assg01-main.cpp
-assg01-functions.hpp
-assg01-functions.cpp
-```
-
-# Requirements and Grading Rubrics
-
-## Program Execution, Output and Functional Requirements
-
-1. Your program must compile, run and produce some sort of output to
-   be graded.  0 if not satisfied.
-1. 40 pts. for correctly implementing the `calculateMean()` function.
-2. 50 pts. for correctly implementing the
-   `calculateStandardDeviation()` function.
-3. 5 pts. for correctly demonstrating <cmath> functions as required.
-4. 5 pts. for showing reuse of function to calculate mean.
-
+In this problem, up to 50 points will be given for having at least 1
+commit that compiles and runs the tests (and at least some attempt was made
+to work on the first task).  Thereafter 10 points are awarded for 
+completing each of the tasks.  However you should note that the autograder
+awards either all point for passing all tests, or no points if any test
+is failing for one of the tasks.  Also note that even if you pass all
+tests, when the instructor evaluates your assignment, they may remove points
+if you don't follow the requirements for implementing the code (e.g. must
+reuse functions here as described).  You may also loose points for style issues.
+The instructor may give back comments in pull requests and/or create new issues for
+you if you have issues such as these, so it is good to have work committed early
+before the due date, so that the instructor may give feedback requesting you
+to fix issues with your current submission.
 
 ## Program Style
 
-Your programs must conform to the style and formatting guidelines
-given for this class.  The following is a list of the guidelines that
-are required for the assignment to be submitted this week.
+At some point you will be required to follow class style and formatting guidelines.
+The VSCode environment has been set up to try and format your code for some of these
+guidelines automatically to conform to class style requirements.  But not all 
+style issues can be enforced by the IDE/Editor.  The instructor may give you feedback
+in your pull comments and/or create issues for you for the assignment that you need to 
+address and fix.  You should address those if asked, and push a new commit that fixes
+the issue (or ask for clarification if you don't understand the request).  In general
+the following style/formatting issues will be required for programs for this class:
 
-1. Most importantly, make sure you figure out how to set your
-   indentation settings correctly.  All programs must use 2 spaces for
-   all indentation levels, and all indentation levels must be
-   correctly indented.  Also all tabs must be removed from files, and
-   only 2 spaces used for indentation.
-1. A function header must be present for all functions you define.
-   You must give a short description of the function, and document
-   all of the input parameters to the function, as well as the return
-   value and data type of the function if it returns a value.
-1. Do not include any statements (such as `system("pause")` or
-   inputting a key from the user to continue) that are meant to keep
-   the terminal from going away.  Do not include any code that is
-   specific to a single operating system, such as the
-   `system("pause")` which is Microsoft Windows specific.
+1. All programs must be properly indented.  All indentation must be consistent and lined
+   up correctly.  Class style requires 2 spaces with no embedded tabs for all code 
+   indentation levels.  The editor style checker should properly indent your code when you
+   save it, but if not you may need to check or correct this if code is misaligned or not
+   properly indented.
+2. Variable and function names must use `camelCaseNameingNotation`.  All variable and function
+   names must begin with a lowercase letter.  Do not use underscores between words in
+   the variable or function name.  Often function names will be given to you, but you
+   will need to create variables, and maybe some functions, that conform to the naming
+   conventions.
+   - Global constants should be used instead of magic numbers.  Global constants are
+     identified useing `ALL_CAPS_UNDERLINE_NAMING`.
+   - User defined types, such as classes, structures and enumerated types should use
+     camel case notation, but should begin with an initial upper case letter, thus
+	 `MyUserDefinedClass`.
+3. You are required to use meaningful variable and function names.
+   Choosing good names for code items is an important skill.  The code
+   examples and starting code tries to give examples of good and
+   meaningful names.  In general, do not use abbreviations.  Single
+   variable names should be avoided, except maybe for generic loop
+   index variables `i`, `j`, etc.  Make your code readable, think of
+   it as writing a document to communicate with other developers (and
+   with your instructor who will be evaluating your code).
+4. There are certain whitespace requirements.  In general there should
+   usually never be more than 1 blank line in a row in your code.
+   Likewise there should usually not be more than 1 blank space on a
+   line.  There should be 1 blank space before and after all binary
+   operators like `+`, `*`, `=`, `or`.
+5. Function documentation is required for all regular functions and
+   all class member functions.  You need to follow the correctly
+   formatted Doxygen function documentation format.  We will use
+   function documentation generation, and you should be sure your
+   documentation can be built without emitting warnings or errors.
+   Likewise all files should have a file header documentation at the
+   top.  You should edit the file header of files where you add in new
+   code (not simply uncommenting existing code).  Make sure the
+   information has your correct name, dates, and other information.
+6. Practice using proper Git commit messages.  You should refer to 
+   issues and tasks correctly in commit messages.
+
+# Additional Information
+
+The following are suggested online materials you may use to help you understand
+the tools and topics we have introduced in this assignment.
+
+- [C/C++ Functions](http://www32.cplusplus.com/doc/tutorial/functions/)
+- [C/C++ Arrays and Arrays as Function Parameters](http://www32.cplusplus.com/doc/tutorial/arrays/)
+- [<cmath> Library Reference](https://www.cplusplus.com/reference/cmath/)
+- [Lecture U01-1 User Defined Functions](https://www.youtube.com/watch?v=Bvhx8ygaBRY&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=6)
+- [Lecture U01-2 User Defined Data Types](https://www.youtube.com/watch?v=gk05fQWPVMA&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=7&t=138s)
+- [Lecture U01-3 C++ Arrays](https://www.youtube.com/watch?v=V_0bFgvfhkM&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=8)
