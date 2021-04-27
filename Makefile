@@ -12,5 +12,8 @@ debug_src = $(PROJECT_NAME)-main.cpp \
 # is included where used)
 template_files =
 
+# assignment description documentation
+assg_doc  = ${PROJECT_NAME}.pdf
+
 # common targets and variables used for all assignments/projects
 include include/Makefile.inc
