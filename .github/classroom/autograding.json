@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "test successfully builds",
+      "setup": "",
+      "run": "make",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 50
+    },
+    {
+      "name": "test sumOfValues",
+      "setup": "make",
+      "run": "./test --list-test-names-only [sumOfValues] | grep . && ./test [sumOfValues]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "test calculateMean",
+      "setup": "make",
+      "run": "./test --list-test-names-only [calculateMean] | grep . && ./test [calculateMean]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "test differenceOfValues",
+      "setup": "make",
+      "run": "./test --list-test-names-only [differenceOfValues] | grep . && ./test [differenceOfValues]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "test squareOfValues",
+      "setup": "make",
+      "run": "./test --list-test-names-only [squareOfValues] | grep . && ./test [squareOfValues]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "test calculateStandardDeviation",
+      "setup": "make",
+      "run": "./test --list-test-names-only [calculateStandardDeviation] | grep . && ./test [calculateStandardDeviation]",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
