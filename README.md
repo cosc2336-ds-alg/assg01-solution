@@ -111,6 +111,11 @@ will write, actually takes first an integer parameter, which is the
 number of values in the array that will be passed in as the second
 parameter.
 
+**NOTE**: Actually the array of `double` values should be
+declared to be a `const` parameter.  Do you know why?  We discussed
+passing in arrays as `const` parameters vs. as non constant in this
+units lecture videos.
+
 As usual a good first baby step is to uncomment the first test case for
 the `sumOfValues()` unit tests.  Then create the function prototype
 for your function, and create a stub implementation that returns
@@ -165,7 +170,7 @@ tests for task 2, to make sure your project still compiles and can now run
 the unit tests that you need to pass for this task 2.
 
 `calculateMean()` will have the same signature as your first function.
-The function should take an array of `double`, and calculate the
+The function should take a `const` array of `double`, and calculate the
 mean of these values, returning their mean as a `double` result.
 
 You are required to reuse the `sumOfValues()` function in order
@@ -187,7 +192,7 @@ compiles and runs still), you should commit your changes and push them to the
 repository, and then document with your pull request and merge 
 the changes to main.
 
-## Task 3: Implement 'differentOfValues()` Function
+## Task 3: Implement 'differenceOfValues()` Function
 
 Make sure you do your prerequesite steps first, such as creating the issue
 for this task, and making sure the previous issue and pull request are closed
@@ -210,6 +215,9 @@ The `differenceOfValues()` function works a bit differently from the previous tw
 We need to pass in an array of `double` values (and the array size) as before.  But you
 will pass in a third parameter of type `double`.  This value is the value you are to subtract
 from each of the values in the array passed as the second parameter.
+
+**NOTE**: This time the array of values cannot be a `const` parameter.  Do you
+understand why not?
 
 This function is a `void` function this time, which is different as well.  You will be
 calculating the difference of each value, and storing the result back in the array
@@ -257,10 +265,16 @@ functions to implement the standard deviation calculation.  You will be using
 all 4 of the previous functions, as well as the `cmath` `sqrt()` function,
 either directly or indirectly here.
 
-This function has the same signature as the `calculateMean()` function.
+This function has almost the same signature as the `calculateMean()` function.
 It takes an array of `double` values and its size as input parameters.
 And it returns a `double` result, which should be the final calculated
 standard deviation of the original array of values.
+
+**NOTE**: in theory the array of values should be `const` for this function since
+it doesn't make sense that calling this function to calculate the standard deviation
+would have as a side effect the property of altering the values.  Why can't the
+parameter be a `const` like in `calculateMean()`?  We will later discuss how to
+fix this little issue when we talk about dynamic memory management.
 
 If all of your previous functions are working, you can implement the
 calculation of the standard deviation in the following manner.
@@ -282,9 +296,6 @@ calculation of the standard deviation in the following manner.
 If you have gotten all of the tasks completed to this point, you should be able to
 run and pass all of the original tests once your `calculateStandardDeviation()`
 is working correctly.  When satisfied you should commit and push your changes.
-
-
-
 
 
 # Assignment Submission
@@ -372,7 +383,7 @@ the tools and topics we have introduced in this assignment.
 
 - [C/C++ Functions](http://www32.cplusplus.com/doc/tutorial/functions/)
 - [C/C++ Arrays and Arrays as Function Parameters](http://www32.cplusplus.com/doc/tutorial/arrays/)
-- [<cmath> Library Reference](https://www.cplusplus.com/reference/cmath/)
+- [cmath Library Reference](https://www.cplusplus.com/reference/cmath/)
 - [Lecture U01-1 User Defined Functions](https://www.youtube.com/watch?v=Bvhx8ygaBRY&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=6)
 - [Lecture U01-2 User Defined Data Types](https://www.youtube.com/watch?v=gk05fQWPVMA&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=7&t=138s)
 - [Lecture U01-3 C++ Arrays](https://www.youtube.com/watch?v=V_0bFgvfhkM&list=PLKELFBqOW0CcnGb7vCvkMxKJeGmucafQH&index=8)
