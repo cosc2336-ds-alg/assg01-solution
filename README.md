@@ -1,5 +1,5 @@
 ---
-title: 'Assignment 01: Review of Functions and Arrays'
+title: 'Assignment Functions: Review of Functions and Arrays'
 author: 'COSC 2336: Data Structures and Algorithms'
 date: 'Summer 2021'
 ---
@@ -69,25 +69,26 @@ work of the functions to calculate the mean and standard deviation.
 For this assignment you will be given the following files that you will be
 using and adding code to for this assignment.
 
-| File Name                      | Description                         |
-|--------------------------------|-------------------------------------|
-| `src/assg01-tests.cpp`         | Unit tests for the five functions you are to write. |
-| `include/assg01-functions.hpp` | Header file for function prototypes you are to add. |
-| `src/assg01-functions.cpp`     | Implementation file for the functions you are to write for this assignment. |
+| File Name                    | Description                         |
+|------------------------------|-------------------------------------|
+| `src/assg-tests.cpp`         | Unit tests for the five functions you are to write. |
+| `include/assg-functions.hpp` | Header file for function prototypes you are to add. |
+| `src/assg-functions.cpp`     | Implementation file for the functions you are to write for this assignment. |
 
 As usual, before starting on the assignment tasks proper, you will need to
 finish the following setup steps.
 
 1. Copy the assignment repository on GitHub using the provided assignment
-   invitation link for assg01 for our current class semester and section.
+   invitation link for the 'Assignment Functions' for our current class semester and section.
 2. Clone the repository using the SSH url to your local class DevBox
    development environment.
 3. Checkout the 'origins/feedback' branch to your locak working DevBox
    repository.
-4. Confirm that the project builds and runs, though no tests will be
+4. Configure the project by running the `configure` script from a terminal.
+5. Confirm that the project builds and runs, though no tests will be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
-5. You should create the issue for Task 1 and/or for all tasks for the assignment
+6. You should create the issue for Task 1 and/or for all tasks for the assignment
    now before beginning the first task.  On your GitHub account, go to issues,
    and create it/them from the issue templates for the assignment.  Also you
    should close the initial Pull request that should be automatically

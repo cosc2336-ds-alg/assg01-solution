@@ -1,14 +1,14 @@
-/** @file assg01-functions.cpp
- * @brief Implementation file for Assignment 01 practice on functions.
+/** @file assg-functions.cpp
+ * @brief Implementation file for Assignment Functions: Review of Functions and Arrays
  *
  * @author Jane Programmer
  * @note   cwid : 123 45 678
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VS Code Server 3.9.3
- * @note   assg : Assignment 01
+ * @note   assg : Assignment Functions
  * @date   June 1, 2021
  *
- * Assignment 01, practice on functions, user defined types and arrays.  This is
+ * Assignment Functions: review of functions and arrays.  This is
  * the file where you should implement the functions calculateMean() and
  * calculateStandardDeviation() as described in the assignment.
  */
