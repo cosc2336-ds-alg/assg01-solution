@@ -1,4 +1,4 @@
-/** @file assg-functions.hpp
+/** @file statslib.hpp
  * @brief Header file for Assignment Functions: Review of Functions and Arrays
  *
  * @author Jane Programmer

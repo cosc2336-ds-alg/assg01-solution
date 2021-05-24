@@ -69,30 +69,27 @@ work of the functions to calculate the mean and standard deviation.
 For this assignment you will be given the following files that you will be
 using and adding code to for this assignment.
 
-| File Name                    | Description                         |
-|------------------------------|-------------------------------------|
-| `src/assg-tests.cpp`         | Unit tests for the five functions you are to write. |
-| `include/assg-functions.hpp` | Header file for function prototypes you are to add. |
-| `src/assg-functions.cpp`     | Implementation file for the functions you are to write for this assignment. |
+| File Name               | Description                                                                 |
+|-------------------------|-----------------------------------------------------------------------------|
+| `src/test-statslib.cpp` | Unit tests for the five functions you are to write.                         |
+| `include/statslib.hpp`  | Header file for function prototypes you are to add.                         |
+| `src/statslib.cpp`      | Implementation file for the functions you are to write for this assignment. |
 
 As usual, before starting on the assignment tasks proper, you will need to
 finish the following setup steps.
 
 1. Copy the assignment repository on GitHub using the provided assignment
    invitation link for the 'Assignment Functions' for our current class semester and section.
-2. Clone the repository using the SSH url to your local class DevBox
+2. Clone the repository using the SSH URL to your local class DevBox
    development environment.
-3. Checkout the 'origins/feedback' branch to your locak working DevBox
-   repository.
-4. Configure the project by running the `configure` script from a terminal.
-5. Confirm that the project builds and runs, though no tests will be
+3. Configure the project by running the `configure` script from a terminal.
+4. Confirm that the project builds and runs, though no tests will be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
-6. You should create the issue for Task 1 and/or for all tasks for the assignment
+5. You should create the issue for Task 1 and/or for all tasks for the assignment
    now before beginning the first task.  On your GitHub account, go to issues,
-   and create it/them from the issue templates for the assignment.  Also you
-   should close the initial Pull request that should be automatically
-   opened for you, so that you can open your own when commiting your work.
+   and create it/them from the issue templates for the assignment. Also make sure
+   you link the issue(s) with the `Feedback` pull request.
 
 
 
@@ -117,21 +114,20 @@ declared to be a `const` parameter.  Do you know why?  We discussed
 passing in arrays as `const` parameters vs. as non constant in this
 units lecture videos.
 
-As usual a good first baby step is to uncomment the first test case for
-the `sumOfValues()` unit tests.  Then create the function prototype
-for your function, and create a stub implementation that returns
-a sum of `0.0`.  Make sure that these changes compile and the
-tests you uncommented run, though of course you won't expect
-them to be passing yet.  When you have code that compiles and runs
-again, this is a good milestone to stage and commit your changes, and
-push them to your `feedback` branch.  You could then create your
-new pull request for your Task 1 and associate this new pull
-request with the Issue 1 for this task you should have.
+As usual a good first baby step is to uncomment the first test case
+for the `sumOfValues()` unit tests.  Then create the function
+prototype for your function, and create a stub implementation that
+returns a sum of `0.0`.  Make sure that these changes compile and the
+tests you uncommented run, though of course you won't expect them to
+be passing yet.  When you have code that compiles and runs again, this
+is a good milestone to stage and commit your changes, and push them to
+your `Feedback` pull request, if you want more practice on committing
+and pushing your changes.
 
 Once you are past the hurdle of adding in the function
 prototype and stub implementation, you can begin implementing the
 function in earnest.  In future assignment descriptions we will
-probably skip the description of adding the funciton prototype
+probably skip the description of adding the function prototype
 and a stub function so that you can get the tests running, and will
 assume that you do this as the first step for most all of the
 assignment tasks.
@@ -139,26 +135,18 @@ assignment tasks.
 The `sumOfValues()` function should be relatively simple to
 implement hopefully.  There are several tests that test
 summing up arrays of various size in the given unit tests.
-Your implementation needs to sum up all of the values and reuturn
+Your implementation needs to sum up all of the values and return
 the resulting sum as a `double` data type.  The unit tests do test
 some edge cases, like for example what if you are given an array
 of size 0 (an empty array), do you return a default sum of 0.0 in that
 case?
 
-Once you have the function working, you should stage and push
-a commit to the `feedback` branch of your work that passes all of the
-unit tests for this first task function.  It may not be needed for this
-task, but in general if you reach a milestone or solve some subproblem,
-even if you are not completely done with the task yet, you should
-create a commit and push it with an appropriate commit message
-describing the sub-milestone.  Though be careful to always make sure
-that your code does compile and run the tests before commiting, 
-you may have points removed if you push commits that break the build.
+Once you have the function working, you should stage and push a commit
+to the `Feedback` pull request of your code that passes all of the
+unit tests for this first task function.  You are required to have at
+least one commit for each task that has code you believe completely
+implements the described task.
 
-You can / should close the pull request and merge your changes with
-the main branch once you are satisfied your first task is working correctly.
-Though do not delete the feedback branch, as you should continue 
-working on it to implement the rest of the tasks.
 
 ## Task 2: Implement `calculateMean()` Function
 
@@ -188,21 +176,20 @@ C/C++ you end up with an integer result.  You should google
 integer division in C/C++ if you do not know what the potential issue
 is here with dividing by an integer data type.
 
-When you are satisfied your function works (make sure your project 
-compiles and runs still), you should commit your changes and push them to the
-repository, and then document with your pull request and merge 
-the changes to main.
+When you are satisfied your function works (make sure your project
+compiles and runs still), you should commit your changes and push them
+to the `Feedback` pull request in your classroom repository.
 
 ## Task 3: Implement 'differenceOfValues()` Function
 
-Make sure you do your prerequesite steps first, such as creating the issue
+Make sure you do your prerequisite steps first, such as creating the issue
 for this task, and making sure the previous issue and pull request are closed
 before starting this task.  Then uncomment the tests for this function, and
 get your project back to a compilable and runable state before proceeding.
 
 If you look closely at the definition of the standard deviation, we can break
 it up into several steps.  First of all, the standard deviation is calculated by taking the
-difference of each value with the mean.  Thene all of the differences are squared.
+difference of each value with the mean.  Then all of the differences are squared.
 The standard deviation is actually the mean of these squared differences, e.g. if we
 calculate the square of the difference of each value with the mean, then take the
 average of these squared differences, then we have the standard deviation (after we
@@ -228,9 +215,8 @@ array to contain the calculated differences, the results of this calculation wil
 back to the caller of your function.
 
 When you are satisfied your function is working, the project still compiles, and you can
-run and pass the tests, perform the usual to create and push a commit to the feedback
-branch, close the pull request for Task 3 and close Issue 3, and merge these changes
-into the main branch.
+run and pass the tests, perform the usual to create and push a commit to the `Feedback`
+pull request.
 
 ## Task 4: Implement 'squareOfValues()' Function
 
@@ -254,8 +240,8 @@ Also you are practicing code reuse here still, and you should always reuse
 function from the standard libraries in the language you are programming with
 where available and where these make your code clearer and more readable.
 
-When satisfied with your implementation, commit and push you change, and close
-the pull request and issue.
+When satisfied with your implementation, commit and push you change and push
+them to the `Feedback` pull request of your classroom repository.
 
 ## Task 5: Implement 'calculateStandardDeviation()' Function
 
@@ -297,6 +283,9 @@ calculation of the standard deviation in the following manner.
 If you have gotten all of the tasks completed to this point, you should be able to
 run and pass all of the original tests once your `calculateStandardDeviation()`
 is working correctly.  When satisfied you should commit and push your changes.
+Check your final GitHub actions at this point.  If your work is committed
+correctly, you should see you now get a green check mark and your most recent
+action passes all actions on the GitHub classroom repository now.
 
 
 # Assignment Submission
@@ -305,53 +294,58 @@ For this class, the submission process is to correctly create a pull
 request(s) with changes committed and pushed to your copied repository
 for grading and evaluation.  For the assignments, you may not be able
 to complete all tasks and have all of the tests successfully
-finishing.  This is ok.  However, you should endeavor to have as many
+finishing.  This is OK.  However, you should endeavor to have as many
 of the tasks completed before the deadline for the assignment as
 possible.  Also, try and make sure that you only push commits that are
-building and able to run the tests.  You may loose points for pushing 
+building and able to run the tests.  You may loose points for pushing
 a broken build, especially if the last build you submit is not
 properly compiling and running the tests.
 
-In this problem, up to 50 points will be given for having at least 1
-commit that compiles and runs the tests (and at least some attempt was made
-to work on the first task).  Thereafter 10 points are awarded for 
-completing each of the tasks.  However you should note that the autograder
-awards either all point for passing all tests, or no points if any test
-is failing for one of the tasks.  Also note that even if you pass all
-tests, when the instructor evaluates your assignment, they may remove points
-if you don't follow the requirements for implementing the code (e.g. must
-reuse functions here as described).  You may also loose points for style issues.
-The instructor may give back comments in pull requests and/or create new issues for
-you if you have issues such as these, so it is good to have work committed early
-before the due date, so that the instructor may give feedback requesting you
-to fix issues with your current submission.
+In this problem, up to 25 points will be given for having at least 1
+commit that compiles and runs the tests (and at least some attempt was
+made to work on the first task).  Thereafter 15 points are awarded for
+completing each of the tasks.  However you should note that the
+autograder awards either all point for passing all tests, or no points
+if any test is failing for one of the tasks.  Also note that even if
+you pass all tests, when the instructor evaluates your assignment,
+they may remove points if you don't follow the requirements for
+implementing the code (e.g. must reuse functions here as described).
+You may also loose points for style issues.  The instructor may give
+back comments in pull requests and/or create new issues for you if you
+have issues such as these, so it is good to have work committed early
+before the due date, so that the instructor may give feedback
+requesting you to fix issues with your current submission.
 
 ## Program Style
 
-At some point you will be required to follow class style and formatting guidelines.
-The VSCode environment has been set up to try and format your code for some of these
-guidelines automatically to conform to class style requirements.  But not all 
-style issues can be enforced by the IDE/Editor.  The instructor may give you feedback
-in your pull comments and/or create issues for you for the assignment that you need to 
-address and fix.  You should address those if asked, and push a new commit that fixes
-the issue (or ask for clarification if you don't understand the request).  In general
-the following style/formatting issues will be required for programs for this class:
+At some point you will be required to follow class style and
+formatting guidelines.  The VSCode environment has been set up to try
+and format your code for some of these guidelines automatically to
+conform to class style requirements.  But not all style issues can be
+enforced by the IDE/Editor.  The instructor may give you feedback in
+your pull comments and/or create issues for you for the assignment
+that you need to address and fix.  You should address those if asked,
+and push a new commit that fixes the issue (or ask for clarification
+if you don't understand the request).  In general the following
+style/formatting issues will be required for programs for this class:
 
-1. All programs must be properly indented.  All indentation must be consistent and lined
-   up correctly.  Class style requires 2 spaces with no embedded tabs for all code 
-   indentation levels.  The editor style checker should properly indent your code when you
-   save it, but if not you may need to check or correct this if code is misaligned or not
-   properly indented.
-2. Variable and function names must use `camelCaseNameingNotation`.  All variable and function
-   names must begin with a lowercase letter.  Do not use underscores between words in
-   the variable or function name.  Often function names will be given to you, but you
-   will need to create variables, and maybe some functions, that conform to the naming
-   conventions.
-   - Global constants should be used instead of magic numbers.  Global constants are
-     identified useing `ALL_CAPS_UNDERLINE_NAMING`.
-   - User defined types, such as classes, structures and enumerated types should use
-     camel case notation, but should begin with an initial upper case letter, thus
-	 `MyUserDefinedClass`.
+1. All programs must be properly indented.  All indentation must be
+   consistent and lined up correctly.  Class style requires 2 spaces
+   with no embedded tabs for all code indentation levels.  The editor
+   style checker should properly indent your code when you save it,
+   but if not you may need to check or correct this if code is
+   misaligned or not properly indented.
+2. Variable and function names must use `camelCaseNameingNotation`.
+   All variable and function names must begin with a lowercase letter.
+   Do not use underscores between words in the variable or function
+   name.  Often function names will be given to you, but you will need
+   to create variables, and maybe some functions, that conform to the
+   naming conventions.
+   - Global constants should be used instead of magic numbers.  Global
+     constants are identified using `ALL_CAPS_UNDERLINE_NAMING`.
+   - User defined types, such as classes, structures and enumerated
+     types should use camel case notation, but should begin with an
+     initial upper case letter, thus `MyUserDefinedClass`.
 3. You are required to use meaningful variable and function names.
    Choosing good names for code items is an important skill.  The code
    examples and starting code tries to give examples of good and
@@ -360,7 +354,7 @@ the following style/formatting issues will be required for programs for this cla
    index variables `i`, `j`, etc.  Make your code readable, think of
    it as writing a document to communicate with other developers (and
    with your instructor who will be evaluating your code).
-4. There are certain whitespace requirements.  In general there should
+4. There are certain white space requirements.  In general there should
    usually never be more than 1 blank line in a row in your code.
    Likewise there should usually not be more than 1 blank space on a
    line.  There should be 1 blank space before and after all binary

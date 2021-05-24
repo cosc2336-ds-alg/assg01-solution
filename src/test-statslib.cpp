@@ -1,5 +1,6 @@
-/** @file assg-tests.cpp
- * @brief Unit tests for Assignment Functions: Review of Functions and Arrays
+/** @file test-statslib.cpp
+ * @brief Unit tests for Assignment Functions: Review of Functions and
+ *   Arrays
  *
  * @author Derek Harter
  * @note   class: COSC 2336, Summer 2021
@@ -19,17 +20,17 @@
 #include <cmath>
 #include <iostream>
 #include "catch.hpp"
-#include "assg-functions.hpp"
+#include "statslib.hpp"
 using namespace std;
 
 
-/** sumOfValues() test case
+/** Task 1: sumOfValues() test case
  * Uncomment the following test case block and write your
  * code to pass these tests for the Task 1 implementation
  * of the sumOfValues() function.
  */
 /*
-   TEST_CASE("<sumOfValues()> function tests", "[sumOfValues]")
+   TEST_CASE("<sumOfValues()> function tests", "[task1]")
    {
    SECTION("test array of 0 item, result should be 0.0 by default")
    {
@@ -99,12 +100,12 @@ using namespace std;
  */
 
 
-/** calculateMean() test cases
+/** Task 2: calculateMean() test cases
  * Uncomment the following test case block and write your code
  * to pass these tests for the calculateMean() function.
  */
 /*
-   TEST_CASE("<calculateMean()> function tests", "[calculateMean]")
+   TEST_CASE("<calculateMean()> function tests", "[task2]")
    {
    SECTION("test mean of array of 1 item")
    {
@@ -183,12 +184,12 @@ using namespace std;
  */
 
 
-/** differenceOfValues() test cases
+/** Task 3: differenceOfValues() test cases
  * Uncomment the following test case block and write your code
  * to pass these tests for the differenceOfValues() function.
  */
 /*
-   TEST_CASE("<differenceOfValues()> function tests", "[differenceOfValues]")
+   TEST_CASE("<differenceOfValues()> function tests", "[task3]")
    {
    SECTION("test differences of an empty array, resulting array should remain unchanged")
    {
@@ -284,12 +285,12 @@ using namespace std;
  */
 
 
-/** squareOfValues() test cases
+/** Task 4: squareOfValues() test cases
  * Uncomment the following test case block and write your code
  * to pass these tests for the squareOfValues() function.
  */
 /*
-   TEST_CASE("<squareOfValues()> function tests", "[squareOfValues]")
+   TEST_CASE("<squareOfValues()> function tests", "[task4]")
    {
    SECTION("test squares of an empty array, resulting array should remain unchanged")
    {
@@ -367,13 +368,13 @@ using namespace std;
  */
 
 
-/** calculateStandardDeviation() test cases
+/** Task 5: calculateStandardDeviation() test cases
  * Uncomment the following test case block and write your code
  * to pass these tests for the calculateStandardDeviation()
  * function.
  */
 /*
-   TEST_CASE("<calculateStandardDeviation()> function tests", "[calculateStandardDeviation]")
+   TEST_CASE("<calculateStandardDeviation()> function tests", "[task5]")
    {
    SECTION("test standard deviation of a single value")
    {

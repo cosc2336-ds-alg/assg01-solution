@@ -8,57 +8,57 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 50
+      "points": 25
     },
     {
-      "name": "test sumOfValues",
+      "name": "task 1 test sumOfValues() function",
       "setup": "make",
-      "run": "./test --list-test-names-only [sumOfValues] | grep . && ./test [sumOfValues]",
+      "run": "./test --list-test-names-only [task1] | grep . && ./test [task1]",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 15
     },
     {
-      "name": "test calculateMean",
+      "name": "task 2 test calculateMean() function",
       "setup": "make",
-      "run": "./test --list-test-names-only [calculateMean] | grep . && ./test [calculateMean]",
+      "run": "./test --list-test-names-only [task2] | grep . && ./test [task2]",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 15
     },
     {
-      "name": "test differenceOfValues",
+      "name": "task 3 test differenceOfValues() function",
       "setup": "make",
-      "run": "./test --list-test-names-only [differenceOfValues] | grep . && ./test [differenceOfValues]",
+      "run": "./test --list-test-names-only [task3] | grep . && ./test [task3]",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 15
     },
     {
-      "name": "test squareOfValues",
+      "name": "task 4 test squareOfValues() function",
       "setup": "make",
-      "run": "./test --list-test-names-only [squareOfValues] | grep . && ./test [squareOfValues]",
+      "run": "./test --list-test-names-only [task4] | grep . && ./test [task4]",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 15
     },
     {
-      "name": "test calculateStandardDeviation",
+      "name": "task 5 test calculateStandardDeviation() function",
       "setup": "make",
-      "run": "./test --list-test-names-only [calculateStandardDeviation] | grep . && ./test [calculateStandardDeviation]",
+      "run": "./test --list-test-names-only [task5] | grep . && ./test [task5]",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 15
     }
   ]
 }

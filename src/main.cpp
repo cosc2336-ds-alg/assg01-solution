@@ -1,5 +1,6 @@
-/** @file assg-main.cpp
- * @brief main/debug executable for Assignment Functions: Review of Functions and Arrays
+/** @file main.cpp
+ * @brief main/debug executable for Assignment Functions: Review of
+ *   Functions and Arrays
  *
  * @author Derek Harter
  * @note   cwid : 123 45 678
@@ -14,7 +15,7 @@
  */
 #include <cmath>
 #include <iostream>
-#include "assg-functions.hpp"
+#include "statslib.hpp"
 using namespace std;
 
 

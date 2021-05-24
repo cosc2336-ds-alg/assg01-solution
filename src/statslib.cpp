@@ -1,4 +1,4 @@
-/** @file assg-functions.cpp
+/** @file statslib.cpp
  * @brief Implementation file for Assignment Functions: Review of Functions and Arrays
  *
  * @author Jane Programmer
