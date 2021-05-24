@@ -1,9 +1,9 @@
 /** @file main.cpp
+ *
  * @brief main/debug executable for Assignment Functions: Review of
  *   Functions and Arrays
  *
  * @author Derek Harter
- * @note   cwid : 123 45 678
  * @note   class: COSC 2336, Summer 2021
  * @note   ide  : VS Code Server 3.9.3
  * @note   assg : Assignment Functions
