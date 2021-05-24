@@ -17,12 +17,13 @@
 using namespace std;
 
 
-/** sum values of array
- * Given an array of double values (and the number of values
- * in the array), sum up the values and return the resulting
- * sum as the result.  Mathematically this function
- * implements the summation operation, where we assume we want
- * to sum up all values from index i=0 to i=n-1.
+/** @brief Sum values of array
+ *
+ * Given an array of double values (and the number of values in the
+ * array), sum up the values and return the resulting sum as the
+ * result.  Mathematically this function implements the summation
+ * operation, where we assume we want to sum up all values from index
+ * i=0 to i=n-1.
  *
  * @param numValues The number of values in the array to sum up.
  * @param values An array of double values we are to calculate
@@ -37,7 +38,8 @@ using namespace std;
 // write your implementation of the sumOfValues() function here
 
 
-/** calculate mean value of array
+/** @brief Calculate mean value of array
+ *
  * Calculate the mean (or average) of the given array of values.  This
  * functions works on a list of integers, but since the mean can be a
  * real valued number, it returns a double result.  The values are
@@ -57,7 +59,8 @@ using namespace std;
 // write your implementation of the calculateMean() function here
 
 
-/** difference of values
+/** @brief Difference of values
+ *
  * Given an array of values and a value to subtract (the differand),
  * Subtract the differend from each value in the array.  This funciton
  * is a void function, it does not return an explicit result.  However,
@@ -75,7 +78,8 @@ using namespace std;
 // write your implementation of the differenceOfValues() function here
 
 
-/** square of values
+/** @brief Square of values
+ *
  * Given an array of values, calculate the square of
  * each value, value^2.  Replace the original value in the
  * array with its squared value.  The array is passed by
@@ -91,7 +95,8 @@ using namespace std;
 // write your implementation of the squareOfValues() function here
 
 
-/** standard deviation of values
+/** @brief standard deviation of values
+ *
  * Calculate the standard deviation of the given list of values.
  * This function works on a list of integers, but since the
  * standard deviation can be a real valued number, it returns

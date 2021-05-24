@@ -98,8 +98,8 @@ finish the following setup steps.
 
 ## Task 1: Implement `sumOfValues()` Function
 
-If you haven't already, create the Task 1 issue on GitHub and close
-the initial Pull request if it is still open.
+If you haven't done so already, create the Task 1 issue on GitHub and
+link the issue for Task 1 with the `Feedback` pull request.
 
 For the first task, you will implement a function named `sumOfValues()`.
 This function will take an array of double values, sum up all of the
@@ -150,9 +150,10 @@ implements the described task.
 
 ## Task 2: Implement `calculateMean()` Function
 
-Make sure that you have created Issue 2 for this task.  And it would be best
-to close your first pull request, so you can create one just for the
-implementation of this issue.
+Make sure that you have created Issue 2 for this task and linked it to
+the `Feedback` pull request.  It is fine if you prefer to create all
+of the issues for the assignments before you begin working on the
+tasks.
 
 As usual, create the function prototype and a stub, and uncomment the
 tests for task 2, to make sure your project still compiles and can now run
@@ -182,41 +183,46 @@ to the `Feedback` pull request in your classroom repository.
 
 ## Task 3: Implement 'differenceOfValues()` Function
 
-Make sure you do your prerequisite steps first, such as creating the issue
-for this task, and making sure the previous issue and pull request are closed
-before starting this task.  Then uncomment the tests for this function, and
-get your project back to a compilable and runable state before proceeding.
+Make sure you do your prerequisite steps first, such as creating the
+issue for this task. Then uncomment the tests for this function, and
+get your project back to a compilable and runable state before
+proceeding.
 
-If you look closely at the definition of the standard deviation, we can break
-it up into several steps.  First of all, the standard deviation is calculated by taking the
-difference of each value with the mean.  Then all of the differences are squared.
-The standard deviation is actually the mean of these squared differences, e.g. if we
-calculate the square of the difference of each value with the mean, then take the
-average of these squared differences, then we have the standard deviation (after we
-take a final square root of this calculation).
+If you look closely at the definition of the standard deviation, we
+can break it up into several steps.  First of all, the standard
+deviation is calculated by taking the difference of each value with
+the mean.  Then all of the differences are squared.  The standard
+deviation is actually the mean of these squared differences, e.g. if
+we calculate the square of the difference of each value with the mean,
+then take the average of these squared differences, then we have the
+standard deviation (after we take a final square root of this
+calculation).
 
-So to calculate the standard deviation, we want to reuse the `calculateMean()` function,
-and we want to create some other smaller functions we can use in that calculation and
-potentially reuse in other ways.
+So to calculate the standard deviation, we want to reuse the
+`calculateMean()` function, and we want to create some other smaller
+functions we can use in that calculation and potentially reuse in
+other ways.
 
-The `differenceOfValues()` function works a bit differently from the previous two.
-We need to pass in an array of `double` values (and the array size) as before.  But you
-will pass in a third parameter of type `double`.  This value is the value you are to subtract
-from each of the values in the array passed as the second parameter.
+The `differenceOfValues()` function works a bit differently from the
+previous two.  We need to pass in an array of `double` values (and the
+array size) as before.  But you will pass in a third parameter of type
+`double`.  This value is the value you are to subtract from each of
+the values in the array passed as the second parameter.
 
-**NOTE**: This time the array of values cannot be a `const` parameter.  Do you
-understand why not?
+**NOTE**: This time the array of values cannot be a `const` parameter.
+Do you understand why not?
 
-This function is a `void` function this time, which is different as well.  You will be
-calculating the difference of each value, and storing the result back in the array
-passed in as a parameters.  As you should have learned/reviewed from this units materials,
-arrays are passed in by reference implicitly.  So if you modify the values of the
-array to contain the calculated differences, the results of this calculation will be returned
-back to the caller of your function.
+This function is a `void` function this time, which is different as
+well.  You will be calculating the difference of each value, and
+storing the result back in the array passed in as a parameters.  As
+you should have learned/reviewed from this units materials, arrays are
+passed in by reference implicitly.  So if you modify the values of the
+array to contain the calculated differences, the results of this
+calculation will be returned back to the caller of your function.
 
-When you are satisfied your function is working, the project still compiles, and you can
-run and pass the tests, perform the usual to create and push a commit to the `Feedback`
-pull request.
+When you are satisfied your function is working, the project still
+compiles, and you can run and pass the tests, perform the usual to
+create and push a commit to the `Feedback` pull request.
 
 ## Task 4: Implement 'squareOfValues()' Function
 
@@ -240,8 +246,8 @@ Also you are practicing code reuse here still, and you should always reuse
 function from the standard libraries in the language you are programming with
 where available and where these make your code clearer and more readable.
 
-When satisfied with your implementation, commit and push you change and push
-them to the `Feedback` pull request of your classroom repository.
+When satisfied with your implementation, commit and push your work
+to the `Feedback` pull request of your classroom repository.
 
 ## Task 5: Implement 'calculateStandardDeviation()' Function
 
