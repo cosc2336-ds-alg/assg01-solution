@@ -1,4 +1,4 @@
-/** @file statslib.hpp
+/** @file libstats.hpp
  *
  * @brief Header file for Assignment Functions: Review of Functions and Arrays
  *

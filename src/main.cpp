@@ -13,7 +13,7 @@
  * contains a separate main() function and is meant to be compiled to
  * a separate executable to be used for debugging or testing.
  */
-#include "statslib.hpp"
+#include "libstats.hpp"
 #include <cmath>
 #include <iostream>
 using namespace std;

@@ -92,8 +92,6 @@ finish the following setup steps.
    you link the issue(s) with the `Feedback` pull request.
 
 
-
-
 # Assignment Tasks
 
 ## Task 1: Implement `sumOfValues()` Function

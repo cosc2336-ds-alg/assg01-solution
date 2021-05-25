@@ -1,4 +1,4 @@
-/** @file statslib.cpp
+/** @file libstats.cpp
  *
  * @brief Implementation file for Assignment Functions: Review of
  *   Functions and Arrays

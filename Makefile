@@ -3,9 +3,9 @@ VERSION=0.3
 BASE_DIR := ../assg-base-$(VERSION)
 PROJECT_NAME=assg
 
-assg_src  = statslib.cpp
+assg_src  = libstats.cpp
 
-test_src  = test-statslib.cpp \
+test_src  = test-libstats.cpp \
 	    ${assg_src}
 
 debug_src = main.cpp \

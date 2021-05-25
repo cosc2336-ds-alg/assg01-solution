@@ -1,4 +1,4 @@
-/** @file test-statslib.cpp
+/** @file test-libstats.cpp
  *
  * @brief Unit tests for Assignment Functions: Review of Functions and
  *   Arrays
@@ -19,7 +19,7 @@
  * incrementally add code till you pass the defined tests.
  */
 #include "catch.hpp"
-#include "statslib.hpp"
+#include "libstats.hpp"
 #include <cmath>
 #include <iostream>
 using namespace std;
