@@ -13,10 +13,9 @@
  * the file where you should implement the functions calculateMean() and
  * calculateStandardDeviation() as described in the assignment.
  */
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
-
 
 /** @brief Sum values of array
  *
@@ -38,7 +37,6 @@ using namespace std;
  */
 // write your implementation of the sumOfValues() function here
 
-
 /** @brief Calculate mean value of array
  *
  * Calculate the mean (or average) of the given array of values.  This
@@ -59,7 +57,6 @@ using namespace std;
  */
 // write your implementation of the calculateMean() function here
 
-
 /** @brief Difference of values
  *
  * Given an array of values and a value to subtract (the differand),
@@ -78,7 +75,6 @@ using namespace std;
  */
 // write your implementation of the differenceOfValues() function here
 
-
 /** @brief Square of values
  *
  * Given an array of values, calculate the square of
@@ -94,7 +90,6 @@ using namespace std;
  *   values to be returned to the caller.
  */
 // write your implementation of the squareOfValues() function here
-
 
 /** @brief standard deviation of values
  *

@@ -18,12 +18,11 @@
  * uncomment the unit tests for the second function, then
  * incrementally add code till you pass the defined tests.
  */
-#include <cmath>
-#include <iostream>
 #include "catch.hpp"
 #include "statslib.hpp"
+#include <cmath>
+#include <iostream>
 using namespace std;
-
 
 /** Task 1: sumOfValues() test case
  * Uncomment the following test case block and write your
@@ -99,7 +98,6 @@ using namespace std;
    }
    }
  */
-
 
 /** Task 2: calculateMean() test cases
  * Uncomment the following test case block and write your code
@@ -183,7 +181,6 @@ using namespace std;
    }
    }
  */
-
 
 /** Task 3: differenceOfValues() test cases
  * Uncomment the following test case block and write your code
@@ -285,7 +282,6 @@ using namespace std;
    }
  */
 
-
 /** Task 4: squareOfValues() test cases
  * Uncomment the following test case block and write your code
  * to pass these tests for the squareOfValues() function.
@@ -367,7 +363,6 @@ using namespace std;
    }
    }
  */
-
 
 /** Task 5: calculateStandardDeviation() test cases
  * Uncomment the following test case block and write your code

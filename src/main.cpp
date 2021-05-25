@@ -13,11 +13,10 @@
  * contains a separate main() function and is meant to be compiled to
  * a separate executable to be used for debugging or testing.
  */
+#include "statslib.hpp"
 #include <cmath>
 #include <iostream>
-#include "statslib.hpp"
 using namespace std;
-
 
 /** @brief Main entry point
  *
@@ -36,17 +35,17 @@ int main(int argc, char** argv)
 {
   // uncomment declaration of the x array when you want to compile and call
   // your functions.
-  //double x[] = {-5, -3, -1, 1, 3, 5};
+  // double x[] = {-5, -3, -1, 1, 3, 5};
 
   double mean = 0;
   // if/when ready to debug calculateMean() uncomment the following and recompile
-  //mean = calculateMean(3, x);
+  // mean = calculateMean(3, x);
   cout << "The mean value is: " << mean << endl;
 
   double std = 0;
   // if/when ready to debug calculateStandardDeviation() uncomment the following
   // and recompile
-  //std = calculateStandardDeviation(1, x);
+  // std = calculateStandardDeviation(1, x);
   cout << "The standard deviation is: " << std << endl;
 
   // return 0 to indicate successful completion
