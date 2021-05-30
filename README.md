@@ -78,19 +78,20 @@ using and adding code to for this assignment.
 As usual, before starting on the assignment tasks proper, you will need to
 finish the following setup steps.
 
-1. Copy the assignment repository on GitHub using the provided assignment
-   invitation link for the 'Assignment Functions' for our current class semester and section.
-2. Clone the repository using the SSH URL to your local class DevBox
-   development environment.
+1. Accept the assignment invitation and copy the assignment repository
+   on GitHub using the provided assignment invitation link for the
+   'Assignment Functions' for our current class semester and section.
+2. Clone the repository to your DevBox using the SSH URL to your local
+   class DevBox development environment.
 3. Configure the project by running the `configure` script from a terminal.
-4. Confirm that the project builds and runs, though no tests will be
+4. Confirm that the project builds and runs, though no tests may be be
    defined or run initially.  If the project does not build on the first
    checkout, please inform the instructor.
 5. You should create the issue for Task 1 and/or for all tasks for the assignment
    now before beginning the first task.  On your GitHub account, go to issues,
    and create it/them from the issue templates for the assignment. Also make sure
    you link the issue(s) with the `Feedback` pull request.
-
+   
 
 # Assignment Tasks
 
