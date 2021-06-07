@@ -71,9 +71,9 @@ using and adding code to for this assignment.
 
 | File Name               | Description                                                                 |
 |-------------------------|-----------------------------------------------------------------------------|
-| `src/test-statslib.cpp` | Unit tests for the five functions you are to write.                         |
-| `include/statslib.hpp`  | Header file for function prototypes you are to add.                         |
-| `src/statslib.cpp`      | Implementation file for the functions you are to write for this assignment. |
+| `src/test-libstats.cpp` | Unit tests for the five functions you are to write.                         |
+| `include/libstats.hpp`  | Header file for function prototypes you are to add.                         |
+| `src/libstats.cpp`      | Implementation file for the functions you are to write for this assignment. |
 
 As usual, before starting on the assignment tasks proper, you will need to
 finish the following setup steps.
