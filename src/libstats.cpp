@@ -95,7 +95,18 @@ double calculateMean(int numValues, const double values[])
  * @param differand The value to subtract from each of the values in
  *   the input array.
  */
-// write your implementation of the differenceOfValues() function here
+void differenceOfValues(int numValues, double values[], double differand)
+{
+  // iterate through the values, subtracting the differand from each value
+  // and putting result back into the values array
+  for (int idx = 0; idx < numValues; idx++)
+  {
+    values[idx] = values[idx] - differand;
+  }
+
+  // result is returned implicitly in the passed by reference
+  // array of values
+}
 
 /** @brief Square of values
  *

@@ -166,101 +166,99 @@ TEST_CASE("<calculateMean()> function tests", "[task2]")
  * Uncomment the following test case block and write your code
  * to pass these tests for the differenceOfValues() function.
  */
-/*
-   TEST_CASE("<differenceOfValues()> function tests", "[task3]")
-   {
-   SECTION("test differences of an empty array, resulting array should remain unchanged")
-   {
+TEST_CASE("<differenceOfValues()> function tests", "[task3]")
+{
+  SECTION("test differences of an empty array, resulting array should remain unchanged")
+  {
     int numValues = 0;
     double values[] = {3.1};
     double differand = 1.5;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(3.1) );
-   }
+    CHECK(values[0] == Approx(3.1));
+  }
 
-   SECTION("test differences of array of 1 value")
-   {
+  SECTION("test differences of array of 1 value")
+  {
     int numValues = 1;
     double values[] = {3.1};
     double differand = 1.5;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(1.6) );
-   }
+    CHECK(values[0] == Approx(1.6));
+  }
 
-   SECTION("test differences of array of 2 value")
-   {
+  SECTION("test differences of array of 2 value")
+  {
     int numValues = 2;
     double values[] = {3.1, -3.1};
     double differand = 1.5;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(1.6) );
-    CHECK(values[1] == Approx(-4.6) );
-   }
+    CHECK(values[0] == Approx(1.6));
+    CHECK(values[1] == Approx(-4.6));
+  }
 
-   SECTION("test negative differences of array of 3 value")
-   {
+  SECTION("test negative differences of array of 3 value")
+  {
     int numValues = 3;
     double values[] = {4.1, -2.1, 8.1};
     double differand = -5.5;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(9.6) );
-    CHECK(values[1] == Approx(3.4) );
-    CHECK(values[2] == Approx(13.6) );
-   }
+    CHECK(values[0] == Approx(9.6));
+    CHECK(values[1] == Approx(3.4));
+    CHECK(values[2] == Approx(13.6));
+  }
 
-   SECTION("test differences all negative")
-   {
+  SECTION("test differences all negative")
+  {
     int numValues = 5;
     double values[] = {4.1, 2.1, 8.1, 7.6, 5.4};
     double differand = 10.1;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(-6.0) );
-    CHECK(values[1] == Approx(-8.0) );
-    CHECK(values[2] == Approx(-2.0) );
-    CHECK(values[3] == Approx(-2.5) );
-    CHECK(values[4] == Approx(-4.7) );
-   }
+    CHECK(values[0] == Approx(-6.0));
+    CHECK(values[1] == Approx(-8.0));
+    CHECK(values[2] == Approx(-2.0));
+    CHECK(values[3] == Approx(-2.5));
+    CHECK(values[4] == Approx(-4.7));
+  }
 
-   SECTION("test a small difference")
-   {
+  SECTION("test a small difference")
+  {
     int numValues = 5;
     double values[] = {4.1, 2.3, 8.8, 7.6, -5.4};
     double differand = 0.001;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(4.099) );
-    CHECK(values[1] == Approx(2.299) );
-    CHECK(values[2] == Approx(8.799) );
-    CHECK(values[3] == Approx(7.599) );
-    CHECK(values[4] == Approx(-5.401) );
-   }
+    CHECK(values[0] == Approx(4.099));
+    CHECK(values[1] == Approx(2.299));
+    CHECK(values[2] == Approx(8.799));
+    CHECK(values[3] == Approx(7.599));
+    CHECK(values[4] == Approx(-5.401));
+  }
 
-   SECTION("test a large difference")
-   {
+  SECTION("test a large difference")
+  {
     int numValues = 5;
     double values[] = {4.1, 2.3, 8.8, 7.6, -5.4};
     double differand = 1234.1234;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(-1230.0234) );
-    CHECK(values[1] == Approx(-1231.8234) );
-    CHECK(values[2] == Approx(-1225.3234) );
-    CHECK(values[3] == Approx(-1226.5234) );
-    CHECK(values[4] == Approx(-1239.5234) );
-   }
+    CHECK(values[0] == Approx(-1230.0234));
+    CHECK(values[1] == Approx(-1231.8234));
+    CHECK(values[2] == Approx(-1225.3234));
+    CHECK(values[3] == Approx(-1226.5234));
+    CHECK(values[4] == Approx(-1239.5234));
+  }
 
-   SECTION("test zero difference")
-   {
+  SECTION("test zero difference")
+  {
     int numValues = 5;
     double values[] = {4.1, 2.3, 8.8, 7.6, -5.4};
     double differand = 0;
     differenceOfValues(numValues, values, differand);
-    CHECK(values[0] == Approx(4.1) );
-    CHECK(values[1] == Approx(2.3) );
-    CHECK(values[2] == Approx(8.8) );
-    CHECK(values[3] == Approx(7.6) );
-    CHECK(values[4] == Approx(-5.4) );
-   }
-   }
- */
+    CHECK(values[0] == Approx(4.1));
+    CHECK(values[1] == Approx(2.3));
+    CHECK(values[2] == Approx(8.8));
+    CHECK(values[3] == Approx(7.6));
+    CHECK(values[4] == Approx(-5.4));
+  }
+}
 
 /** Task 4: squareOfValues() test cases
  * Uncomment the following test case block and write your code
