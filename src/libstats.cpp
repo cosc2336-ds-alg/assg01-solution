@@ -35,7 +35,20 @@ using namespace std;
  *   This function handles arrays of size 0, where the sum of
  *   such an empty array is assumed to be 0.0.
  */
-// write your implementation of the sumOfValues() function here
+double sumOfValues(int numValues, const double values[])
+{
+  // hold the result while we calculate it to be returned
+  double sum = 0.0;
+
+  // perform summation of all array values from idx=0 to idx=numValues-1
+  for (int idx = 0; idx < numValues; idx++)
+  {
+    sum += values[idx];
+  }
+
+  // return the resulting sum
+  return sum;
+}
 
 /** @brief Calculate mean value of array
  *

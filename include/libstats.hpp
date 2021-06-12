@@ -15,5 +15,4 @@
  */
 
 // function prototypes for assignment 01
-// you should put in the function prototypes for the two functions
-// you implement in the .cpp file here so they can be included where needed
+double sumOfValues(int numValues, const double values[]);

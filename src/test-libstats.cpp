@@ -29,75 +29,67 @@ using namespace std;
  * code to pass these tests for the Task 1 implementation
  * of the sumOfValues() function.
  */
-/*
-   TEST_CASE("<sumOfValues()> function tests", "[task1]")
-   {
-   SECTION("test array of 0 item, result should be 0.0 by default")
-   {
+TEST_CASE("<sumOfValues()> function tests", "[task1]")
+{
+  SECTION("test array of 0 item, result should be 0.0 by default")
+  {
     // can't actually assign an empty array, so create an array with a value,
     // but ask function to sum up as if array has no values.
     double x[] = {1.0};
-    CHECK(sumOfValues(0, x) == Approx(0.0) );
-   }
+    CHECK(sumOfValues(0, x) == Approx(0.0));
+  }
 
-   SECTION("test summing array of 1 item")
-   {
+  SECTION("test summing array of 1 item")
+  {
     double x[] = {3.0};
-    CHECK(sumOfValues(1, x) == Approx(3.0) );
-   }
+    CHECK(sumOfValues(1, x) == Approx(3.0));
+  }
 
-   SECTION("test summing array of 2 items")
-   {
+  SECTION("test summing array of 2 items")
+  {
     double x[] = {3.5, 5.2};
-    CHECK(sumOfValues(2, x) == Approx(8.7) );
-   }
+    CHECK(sumOfValues(2, x) == Approx(8.7));
+  }
 
-   SECTION("test summing when sum is 0")
-   {
+  SECTION("test summing when sum is 0")
+  {
     double x[] = {-1.5, 1.5, -1.2, 1.2, 0.0, 2.7, -2.7};
-    CHECK(sumOfValues(7, x) == Approx(0.0) );
-   }
+    CHECK(sumOfValues(7, x) == Approx(0.0));
+  }
 
-   SECTION("test general summing")
-   {
-    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5,
-                  2.6, 7.7, 5.8, 4.9, 5.0,
-                  2.1, 1.2, 9.3, 8.4, 9.5,
-                  3.6, 5.7, 2.8, 5.9, 8.0,
-                  8.1, 9.2};
-    CHECK(sumOfValues(22, x) == Approx(133.3) );
-   }
+  SECTION("test general summing")
+  {
+    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5, 2.6, 7.7, 5.8, 4.9, 5.0, 2.1, 1.2, 9.3, 8.4, 9.5, 3.6, 5.7, 2.8, 5.9, 8.0, 8.1, 9.2};
+    CHECK(sumOfValues(22, x) == Approx(133.3));
+  }
 
-   SECTION("test summing more general case and 8 digits of precision")
-   {
-    double x[] = { 671.64241375,  887.58460132,  767.85753248,  848.324912,
-                   -182.18919084, -133.45585287, -767.88955111, -277.36345661,
-                   -837.42289395, -191.26413373, -318.54064004,  132.40635604,
-                   130.12160027, -151.27562141, -789.4257901, -578.68535002,
-                   -7.72868331,  959.6752345, -738.27468728, -560.421842  };
+  SECTION("test summing more general case and 8 digits of precision")
+  {
+    double x[] = {671.64241375, 887.58460132, 767.85753248, 848.324912, -182.18919084, -133.45585287, -767.88955111, -277.36345661,
+      -837.42289395, -191.26413373, -318.54064004, 132.40635604, 130.12160027, -151.27562141, -789.4257901, -578.68535002, -7.72868331,
+      959.6752345, -738.27468728, -560.421842};
     // more rounding than usual, so increase margin a bit for acceptable equivalance
-    CHECK(sumOfValues(20, x) == Approx(-1136.3250429038976).margin(0.000000001) );
-   }
+    CHECK(sumOfValues(20, x) == Approx(-1136.3250429038976).margin(0.000000001));
+  }
 
-   SECTION("test a negative summation")
-   {
+  SECTION("test a negative summation")
+  {
     double x[] = {-5.1, -2.2, -3.3, 4.4, -7.5, 0.6, -2.7, -8.8, -6.9, -1.1};
-    CHECK(sumOfValues(10, x) == Approx(-32.6) );
-   }
+    CHECK(sumOfValues(10, x) == Approx(-32.6));
+  }
 
-   SECTION("test summing using different size parameters")
-   {
+  SECTION("test summing using different size parameters")
+  {
     double x[] = {-5.55, -3.33, -1.11, 1.11, 3.33, 5.55};
-    CHECK(sumOfValues(1, x) == Approx(-5.55) );
-    CHECK(sumOfValues(2, x) == Approx(-8.88) );
-    CHECK(sumOfValues(3, x) == Approx(-9.99) );
-    CHECK(sumOfValues(4, x) == Approx(-8.88) );
-    CHECK(sumOfValues(5, x) == Approx(-5.55) );
+    CHECK(sumOfValues(1, x) == Approx(-5.55));
+    CHECK(sumOfValues(2, x) == Approx(-8.88));
+    CHECK(sumOfValues(3, x) == Approx(-9.99));
+    CHECK(sumOfValues(4, x) == Approx(-8.88));
+    CHECK(sumOfValues(5, x) == Approx(-5.55));
     // more rounding than usual, so increase margin a bit for acceptable equivalance
-    CHECK(sumOfValues(6, x) == Approx(0.0).margin(0.000000001) );
-   }
-   }
- */
+    CHECK(sumOfValues(6, x) == Approx(0.0).margin(0.000000001));
+  }
+}
 
 /** Task 2: calculateMean() test cases
  * Uncomment the following test case block and write your code
