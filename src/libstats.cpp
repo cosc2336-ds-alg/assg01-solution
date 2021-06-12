@@ -68,7 +68,16 @@ double sumOfValues(int numValues, const double values[])
  * @returns A double result, the calculated mean or average of the
  *   list of values.
  */
-// write your implementation of the calculateMean() function here
+double calculateMean(int numValues, const double values[])
+{
+  // get the sum of the values
+  double sum = sumOfValues(numValues, values);
+
+  // the average is the sum divided by the number of values
+  // we'll cast the denominator to a double to ensure no
+  // possibility of integer division here
+  return sum / (double)numValues;
+}
 
 /** @brief Difference of values
  *

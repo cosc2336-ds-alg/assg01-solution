@@ -16,3 +16,4 @@
 
 // function prototypes for assignment 01
 double sumOfValues(int numValues, const double values[]);
+double calculateMean(int numValues, const double values[]);

@@ -95,84 +95,72 @@ TEST_CASE("<sumOfValues()> function tests", "[task1]")
  * Uncomment the following test case block and write your code
  * to pass these tests for the calculateMean() function.
  */
-/*
-   TEST_CASE("<calculateMean()> function tests", "[task2]")
-   {
-   SECTION("test mean of array of 1 item")
-   {
+TEST_CASE("<calculateMean()> function tests", "[task2]")
+{
+  SECTION("test mean of array of 1 item")
+  {
     double x[] = {3.1};
-    CHECK(calculateMean(1, x) == Approx(3.1) );
-   }
+    CHECK(calculateMean(1, x) == Approx(3.1));
+  }
 
-   SECTION("test mean of array of 2 items")
-   {
+  SECTION("test mean of array of 2 items")
+  {
     double x[] = {3.2, 5.4};
-    CHECK(calculateMean(2, x) == Approx(4.3) );
-   }
+    CHECK(calculateMean(2, x) == Approx(4.3));
+  }
 
-   SECTION("test mean when sum is 0 thus mean is 0")
-   {
+  SECTION("test mean when sum is 0 thus mean is 0")
+  {
     double x[] = {-1.1, 1.1, -1.9, 1.9, 0.0, 2.4, -2.4};
-    CHECK(calculateMean(7, x) == Approx(0.0) );
-   }
+    CHECK(calculateMean(7, x) == Approx(0.0));
+  }
 
-   SECTION("test basic calculation of mean")
-   {
-    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5,
-                  2.6, 7.7, 5.8, 4.9, 5.0,
-                  2.1, 1.2, 9.3, 8.4, 9.5,
-                  3.6, 5.7, 2.8, 5.9, 8.0,
-                  8.1, 9.2};
-    CHECK(calculateMean(22, x) == Approx(6.0590909090909095) );
-   }
+  SECTION("test basic calculation of mean")
+  {
+    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5, 2.6, 7.7, 5.8, 4.9, 5.0, 2.1, 1.2, 9.3, 8.4, 9.5, 3.6, 5.7, 2.8, 5.9, 8.0, 8.1, 9.2};
+    CHECK(calculateMean(22, x) == Approx(6.0590909090909095));
+  }
 
-   SECTION("test mean of only first 10 elements of previous")
-   {
-    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5,
-                  2.6, 7.7, 5.8, 4.9, 5.0};
-    CHECK(calculateMean(10, x) == Approx(5.95) );
-   }
+  SECTION("test mean of only first 10 elements of previous")
+  {
+    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5, 2.6, 7.7, 5.8, 4.9, 5.0};
+    CHECK(calculateMean(10, x) == Approx(5.95));
+  }
 
-   SECTION("test mean of more general case and 8 digits of precision")
-   {
-    double x[] = { 671.64241375,  887.58460132,  767.85753248,  848.324912,
-                   -182.18919084, -133.45585287, -767.88955111, -277.36345661,
-                   -837.42289395, -191.26413373, -318.54064004,  132.40635604,
-                   130.12160027, -151.27562141, -789.4257901, -578.68535002,
-                   -7.72868331,  959.6752345, -738.27468728, -560.421842  };
+  SECTION("test mean of more general case and 8 digits of precision")
+  {
+    double x[] = {671.64241375, 887.58460132, 767.85753248, 848.324912, -182.18919084, -133.45585287, -767.88955111, -277.36345661,
+      -837.42289395, -191.26413373, -318.54064004, 132.40635604, 130.12160027, -151.27562141, -789.4257901, -578.68535002, -7.72868331,
+      959.6752345, -738.27468728, -560.421842};
     // more rounding than usual, so increase margin a bit for acceptable equivalance
-    CHECK(calculateMean(20, x) == Approx(-56.816252145499995).margin(0.000000001) );
-   }
+    CHECK(calculateMean(20, x) == Approx(-56.816252145499995).margin(0.000000001));
+  }
 
-   SECTION("test mean of more general cases")
-   {
-    double x[] = { 6.11, 14.22, 9.33,  3.44, 7.55,
-                   12.66,  5.77, 3.88, 18.99, 2.11,
-                   7.22, 19.33, 4.44,  5.55, 8.66,
-                   0.77,  7.88};
+  SECTION("test mean of more general cases")
+  {
+    double x[] = {6.11, 14.22, 9.33, 3.44, 7.55, 12.66, 5.77, 3.88, 18.99, 2.11, 7.22, 19.33, 4.44, 5.55, 8.66, 0.77, 7.88};
     // more rounding than usual, so increase margin a bit for acceptable equivalance
-    CHECK(calculateMean(17, x) == Approx(8.11235294117647).margin(0.000000001) );
-   }
+    CHECK(calculateMean(17, x) == Approx(8.11235294117647).margin(0.000000001));
+  }
 
-   SECTION("test a negative average")
-   {
+  SECTION("test a negative average")
+  {
     double x[] = {-5.1, -2.2, -3.3, 4.4, -7.5, 0.6, -2.7, -8.8, -6.9, -1.5};
-    CHECK(calculateMean(10, x) == Approx(-3.3) );
-   }
+    CHECK(calculateMean(10, x) == Approx(-3.3));
+  }
 
-   SECTION("test using size parameter correctly")
-   {
+  SECTION("test using size parameter correctly")
+  {
     double x[] = {-5.1, -3.2, -1.3, 1.3, 3.2, 5.1};
-    CHECK(calculateMean(1, x) == Approx(-5.1) );
-    CHECK(calculateMean(2, x) == Approx(-4.15) );
-    CHECK(calculateMean(3, x) == Approx(-3.2) );
-    CHECK(calculateMean(4, x) == Approx(-2.075) );
-    CHECK(calculateMean(5, x) == Approx(-1.02) );
+    CHECK(calculateMean(1, x) == Approx(-5.1));
+    CHECK(calculateMean(2, x) == Approx(-4.15));
+    CHECK(calculateMean(3, x) == Approx(-3.2));
+    CHECK(calculateMean(4, x) == Approx(-2.075));
+    CHECK(calculateMean(5, x) == Approx(-1.02));
     // more rounding than usual, so increase margin a bit for acceptable equivalance
-    CHECK(calculateMean(6, x) == Approx(0.0).margin(0.000000001) );
-   }
-   }
- */
+    CHECK(calculateMean(6, x) == Approx(0.0).margin(0.000000001));
+  }
+}
 
 /** Task 3: differenceOfValues() test cases
  * Uncomment the following test case block and write your code
