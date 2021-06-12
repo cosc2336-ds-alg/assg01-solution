@@ -150,4 +150,22 @@ void squareOfValues(int numValues, double values[])
  * @returns A double result, the calculated mean or average of the
  *   list of values.
  */
-// write your implementation of the calculateStandardDeviation() function here
+double calculateStandardDeviation(int numValues, double values[])
+{
+  // 1. calculate the mean of the initial values we are given
+  double mean = calculateMean(numValues, values);
+
+  // 2. calculate the difference of each value from the mean
+  differenceOfValues(numValues, values, mean);
+
+  // 3. calculate the squared difference of each value now
+  squareOfValues(numValues, values);
+
+  // at this point values has the square of the differences of the
+  // original values from the original mean
+  // 4. calculate the mean of the squared differences we currently have
+  mean = calculateMean(numValues, values);
+
+  // 5. final result is the square root of the mean of the squared differences
+  return sqrt(mean);
+}

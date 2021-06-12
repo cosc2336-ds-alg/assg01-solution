@@ -345,90 +345,82 @@ TEST_CASE("<squareOfValues()> function tests", "[task4]")
  * to pass these tests for the calculateStandardDeviation()
  * function.
  */
-/*
-   TEST_CASE("<calculateStandardDeviation()> function tests", "[task5]")
-   {
-   SECTION("test standard deviation of a single value")
-   {
+TEST_CASE("<calculateStandardDeviation()> function tests", "[task5]")
+{
+  SECTION("test standard deviation of a single value")
+  {
     double x[] = {3.1};
-    CHECK(calculateStandardDeviation(1, x) == Approx(0.0) );
-   }
+    CHECK(calculateStandardDeviation(1, x) == Approx(0.0));
+  }
 
-   SECTION("test standard deviation of two values")
-   {
+  SECTION("test standard deviation of two values")
+  {
     double x[] = {3.1, 5.2};
-    CHECK(calculateStandardDeviation(2, x) == Approx(1.05) );
-   }
+    CHECK(calculateStandardDeviation(2, x) == Approx(1.05));
+  }
 
-   SECTION("test when standard deviation is 0 for a set of values")
-   {
+  SECTION("test when standard deviation is 0 for a set of values")
+  {
     double x[] = {3.75, 3.75, 3.75, 3.75, 3.75, 3.75, 3.75, 3.75, 3.75, 3.75, 3.75};
-    CHECK(calculateStandardDeviation(11, x) == Approx(0.0) );
-   }
+    CHECK(calculateStandardDeviation(11, x) == Approx(0.0));
+  }
 
-   SECTION("test basic calculation of standard deviation")
-   {
-    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5,
-                  2.6, 7.7, 5.8, 4.9, 5.0,
-                  2.1, 1.2, 9.3, 8.4, 9.5,
-                  3.6, 5.7, 2.8, 5.9, 8.0,
-                  8.1, 9.2};
-    CHECK(calculateStandardDeviation(22, x) == Approx(2.573229151176166).margin(0.00000001) );
-   }
+  SECTION("test basic calculation of standard deviation")
+  {
+    double x[] = {5.1, 8.2, 3.3, 7.4, 9.5, 2.6, 7.7, 5.8, 4.9, 5.0, 2.1, 1.2, 9.3, 8.4, 9.5, 3.6, 5.7, 2.8, 5.9, 8.0, 8.1, 9.2};
+    CHECK(calculateStandardDeviation(22, x) == Approx(2.573229151176166).margin(0.00000001));
+  }
 
-   SECTION("test another basic calculation of standard deviation")
-   {
-    double x[] = {-15.12,  10.34,  18.56, -16.78,  -2.90,  -5.12,   5.34, -13.56,
-                  -12.78, -12.90,  12.12, -17.34,   6.56, -15.67,  -7.89,  -2.01,
-                  -15.23,   5.45, -17.67,   4.89, -15.01, -12.23,  -9.45, -11.67,
-                  -7.89};
-    CHECK(calculateStandardDeviation(25, x) == Approx(10.441254974379277).margin(0.00000001) );
-   }
+  SECTION("test another basic calculation of standard deviation")
+  {
+    double x[] = {-15.12, 10.34, 18.56, -16.78, -2.90, -5.12, 5.34, -13.56, -12.78, -12.90, 12.12, -17.34, 6.56, -15.67, -7.89, -2.01,
+      -15.23, 5.45, -17.67, 4.89, -15.01, -12.23, -9.45, -11.67, -7.89};
+    CHECK(calculateStandardDeviation(25, x) == Approx(10.441254974379277).margin(0.00000001));
+  }
 
-   SECTION("test using size parameter 1 correctly")
-   {
+  SECTION("test using size parameter 1 correctly")
+  {
     double x[] = {-5, -3, -1, 1, 3, 5};
-    CHECK(calculateStandardDeviation(1, x) == Approx(0.0) );
-   }
+    CHECK(calculateStandardDeviation(1, x) == Approx(0.0));
+  }
 
-   SECTION("test using size parameter 2 correctly")
-   {
+  SECTION("test using size parameter 2 correctly")
+  {
     // notice can't reuse x like we did before, why is that and how
     // would you fix that?
     double x[] = {-5.0, -3.0, -1.0, 1.0, 3.0, 5.0};
-    CHECK(calculateStandardDeviation(2, x) == Approx(1.0) );
-   }
+    CHECK(calculateStandardDeviation(2, x) == Approx(1.0));
+  }
 
-   SECTION("test using size parameter 3 correctly")
-   {
+  SECTION("test using size parameter 3 correctly")
+  {
     // notice can't reuse x like we did before, why is that and how
     // would you fix that?
     double x[] = {-5.0, -3.0, -1.0, 1.0, 3.0, 5.0};
-    CHECK(calculateStandardDeviation(3, x) == Approx(sqrt(8.0 / 3.0) ) );
-   }
+    CHECK(calculateStandardDeviation(3, x) == Approx(sqrt(8.0 / 3.0)));
+  }
 
-   SECTION("test using size parameter 4 correctly")
-   {
+  SECTION("test using size parameter 4 correctly")
+  {
     // notice can't reuse x like we did before, why is that and how
     // would you fix that?
     double x[] = {-5.0, -3.0, -1.0, 1.0, 3.0, 5.0};
-    CHECK(calculateStandardDeviation(4, x) == Approx(sqrt(20.0 / 4.0) ) );
-   }
+    CHECK(calculateStandardDeviation(4, x) == Approx(sqrt(20.0 / 4.0)));
+  }
 
-   SECTION("test using size parameter 5 correctly")
-   {
+  SECTION("test using size parameter 5 correctly")
+  {
     // notice can't reuse x like we did before, why is that and how
     // would you fix that?
     double x[] = {-5.0, -3.0, -1.0, 1.0, 3.0, 5.0};
-    CHECK(calculateStandardDeviation(5, x) == Approx(sqrt(40.0 / 5.0) ) );
-   }
+    CHECK(calculateStandardDeviation(5, x) == Approx(sqrt(40.0 / 5.0)));
+  }
 
-   SECTION("test using size parameter 6 correctly")
-   {
+  SECTION("test using size parameter 6 correctly")
+  {
     // notice can't reuse x like we did before, why is that and how
     // would you fix that?
     double x[] = {-5.0, -3.0, -1.0, 1.0, 3.0, 5.0};
-    CHECK(calculateStandardDeviation(6, x) == Approx(sqrt(70.0 / 6.0) ) );
-   }
-   }
- */
+    CHECK(calculateStandardDeviation(6, x) == Approx(sqrt(70.0 / 6.0)));
+  }
+}
