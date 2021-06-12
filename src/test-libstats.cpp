@@ -264,83 +264,81 @@ TEST_CASE("<differenceOfValues()> function tests", "[task3]")
  * Uncomment the following test case block and write your code
  * to pass these tests for the squareOfValues() function.
  */
-/*
-   TEST_CASE("<squareOfValues()> function tests", "[task4]")
-   {
-   SECTION("test squares of an empty array, resulting array should remain unchanged")
-   {
+TEST_CASE("<squareOfValues()> function tests", "[task4]")
+{
+  SECTION("test squares of an empty array, resulting array should remain unchanged")
+  {
     int numValues = 0;
     double values[] = {3.1};
     squareOfValues(numValues, values);
-    CHECK(values[0] == Approx(3.1) );
-   }
+    CHECK(values[0] == Approx(3.1));
+  }
 
-   SECTION("test squares of array of 1 value")
-   {
+  SECTION("test squares of array of 1 value")
+  {
     int numValues = 1;
     double values[] = {3.1};
     squareOfValues(numValues, values);
-    CHECK(values[0] == Approx(9.61) );
-   }
+    CHECK(values[0] == Approx(9.61));
+  }
 
-   SECTION("test squares of array of 2 value")
-   {
+  SECTION("test squares of array of 2 value")
+  {
     int numValues = 2;
     double values[] = {3.1, -3.1};
     squareOfValues(numValues, values);
-    CHECK(values[0] == Approx(9.61) );
-    CHECK(values[1] == Approx(9.61) );
-   }
+    CHECK(values[0] == Approx(9.61));
+    CHECK(values[1] == Approx(9.61));
+  }
 
-   SECTION("test squares of 0")
-   {
+  SECTION("test squares of 0")
+  {
     int numValues = 4;
     double values[] = {0, 0.0, 0.00, 0.000};
     squareOfValues(numValues, values);
-    CHECK(values[0] == Approx(0.0).margin(0.00000001) );
-    CHECK(values[1] == Approx(0.0).margin(0.00000001) );
-    CHECK(values[3] == Approx(0.0).margin(0.00000001) );
-    CHECK(values[4] == Approx(0.0).margin(0.00000001) );
-   }
+    CHECK(values[0] == Approx(0.0).margin(0.00000001));
+    CHECK(values[1] == Approx(0.0).margin(0.00000001));
+    CHECK(values[3] == Approx(0.0).margin(0.00000001));
+    CHECK(values[4] == Approx(0.0).margin(0.00000001));
+  }
 
-   SECTION("test some whole nuber squares")
-   {
+  SECTION("test some whole nuber squares")
+  {
     int numValues = 8;
     double values[] = {-9, -5, -3, -1, 1, 3, 5, 9};
     squareOfValues(numValues, values);
-    CHECK(values[0] == Approx(81.0) );
-    CHECK(values[1] == Approx(25.0) );
-    CHECK(values[2] == Approx(9.0) );
-    CHECK(values[3] == Approx(1.0) );
-    CHECK(values[4] == Approx(1.0) );
-    CHECK(values[5] == Approx(9.0) );
-    CHECK(values[6] == Approx(25.0) );
-    CHECK(values[7] == Approx(81.0) );
-   }
+    CHECK(values[0] == Approx(81.0));
+    CHECK(values[1] == Approx(25.0));
+    CHECK(values[2] == Approx(9.0));
+    CHECK(values[3] == Approx(1.0));
+    CHECK(values[4] == Approx(1.0));
+    CHECK(values[5] == Approx(9.0));
+    CHECK(values[6] == Approx(25.0));
+    CHECK(values[7] == Approx(81.0));
+  }
 
-   SECTION("test squares of small values")
-   {
+  SECTION("test squares of small values")
+  {
     int numValues = 4;
     double values[] = {0.01, -0.0005, -0.9e-8, 0.0033};
     squareOfValues(numValues, values);
-    CHECK(values[0] == Approx(pow(0.01, 2.0)).margin(0.00000001) );
-    CHECK(values[1] == Approx(pow(-0.0005, 2.0)).margin(0.00000001) );
-    CHECK(values[2] == Approx(pow(-0.9e-8, 2.0)).margin(0.00000001) );
-    CHECK(values[3] == Approx(pow(0.0033, 2.0)).margin(0.00000001) );
-   }
+    CHECK(values[0] == Approx(pow(0.01, 2.0)).margin(0.00000001));
+    CHECK(values[1] == Approx(pow(-0.0005, 2.0)).margin(0.00000001));
+    CHECK(values[2] == Approx(pow(-0.9e-8, 2.0)).margin(0.00000001));
+    CHECK(values[3] == Approx(pow(0.0033, 2.0)).margin(0.00000001));
+  }
 
-   SECTION("test squaes of large values")
-   {
+  SECTION("test squaes of large values")
+  {
     int numValues = 4;
     double values[] = {5.5e6, 7.1234e8, -3.9128e5, -8.91e6};
     squareOfValues(numValues, values);
-    CHECK(values[0] == Approx(pow(5.5e6, 2.0)).margin(0.00000001) );
-    CHECK(values[1] == Approx(pow(7.1234e8, 2.0)).margin(0.00000001) );
-    CHECK(values[2] == Approx(pow(-3.9128e5, 2.0)).margin(0.00000001) );
-    CHECK(values[3] == Approx(pow(-8.91e6, 2.0)).margin(0.00000001) );
-   }
-   }
- */
+    CHECK(values[0] == Approx(pow(5.5e6, 2.0)).margin(0.00000001));
+    CHECK(values[1] == Approx(pow(7.1234e8, 2.0)).margin(0.00000001));
+    CHECK(values[2] == Approx(pow(-3.9128e5, 2.0)).margin(0.00000001));
+    CHECK(values[3] == Approx(pow(-8.91e6, 2.0)).margin(0.00000001));
+  }
+}
 
 /** Task 5: calculateStandardDeviation() test cases
  * Uncomment the following test case block and write your code

@@ -122,7 +122,17 @@ void differenceOfValues(int numValues, double values[], double differand)
  *   to the caller.  The squared value is stored back in this array of
  *   values to be returned to the caller.
  */
-// write your implementation of the squareOfValues() function here
+void squareOfValues(int numValues, double values[])
+{
+  // iterate through the values, squaring each value in place
+  for (int idx = 0; idx < numValues; idx++)
+  {
+    values[idx] = pow(values[idx], 2.0);
+  }
+
+  // result is returned implicitly in the passed by reference
+  // array of values
+}
 
 /** @brief standard deviation of values
  *
