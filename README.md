@@ -59,6 +59,7 @@ s &= \sqrt{\frac{1}{n} \big[ (x_0 - \bar{x})^2 + (x_1 - \bar{x})^2 + (x_2 - \bar
   &= \sqrt{\frac{1}{5} \big[ (5 - 3.8)^2 + (3 - 3.8)^2 + (8 - 3.8)^2 + (2 - 3.8)^2 + (1 - 3.8)^2 \big] } \\
   &\approx 2.4819
 $$
+
 We will be emphasizing the writing and reuse of functions in this assignment.
 You will build several smaller functions that will be reused to do most of the
 work of the functions to calculate the mean and standard deviation.
