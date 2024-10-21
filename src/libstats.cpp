@@ -35,7 +35,20 @@ using namespace std;
  *   This function handles arrays of size 0, where the sum of
  *   such an empty array is assumed to be 0.0.
  */
-// write your implementation of the sumOfValues() function here
+double sumOfValues(int numValues, const double values[])
+{
+  // hold the result while we calculate it to be returned
+  double sum = 0.0;
+
+  // perform summation of all array values from idx=0 to idx=numValues-1
+  for (int idx = 0; idx < numValues; idx++)
+  {
+    sum += values[idx];
+  }
+
+  // return the resulting sum
+  return sum;
+}
 
 /** @brief Calculate mean value of array
  *
@@ -55,7 +68,16 @@ using namespace std;
  * @returns A double result, the calculated mean or average of the
  *   list of values.
  */
-// write your implementation of the calculateMean() function here
+double calculateMean(int numValues, const double values[])
+{
+  // get the sum of the values
+  double sum = sumOfValues(numValues, values);
+
+  // the average is the sum divided by the number of values
+  // we'll cast the denominator to a double to ensure no
+  // possibility of integer division here
+  return sum / (double)numValues;
+}
 
 /** @brief Difference of values
  *
@@ -73,7 +95,18 @@ using namespace std;
  * @param differand The value to subtract from each of the values in
  *   the input array.
  */
-// write your implementation of the differenceOfValues() function here
+void differenceOfValues(int numValues, double values[], double differand)
+{
+  // iterate through the values, subtracting the differand from each value
+  // and putting result back into the values array
+  for (int idx = 0; idx < numValues; idx++)
+  {
+    values[idx] = values[idx] - differand;
+  }
+
+  // result is returned implicitly in the passed by reference
+  // array of values
+}
 
 /** @brief Square of values
  *
@@ -89,7 +122,17 @@ using namespace std;
  *   to the caller.  The squared value is stored back in this array of
  *   values to be returned to the caller.
  */
-// write your implementation of the squareOfValues() function here
+void squareOfValues(int numValues, double values[])
+{
+  // iterate through the values, squaring each value in place
+  for (int idx = 0; idx < numValues; idx++)
+  {
+    values[idx] = pow(values[idx], 2.0);
+  }
+
+  // result is returned implicitly in the passed by reference
+  // array of values
+}
 
 /** @brief standard deviation of values
  *
@@ -107,4 +150,22 @@ using namespace std;
  * @returns A double result, the calculated mean or average of the
  *   list of values.
  */
-// write your implementation of the calculateStandardDeviation() function here
+double calculateStandardDeviation(int numValues, double values[])
+{
+  // 1. calculate the mean of the initial values we are given
+  double mean = calculateMean(numValues, values);
+
+  // 2. calculate the difference of each value from the mean
+  differenceOfValues(numValues, values, mean);
+
+  // 3. calculate the squared difference of each value now
+  squareOfValues(numValues, values);
+
+  // at this point values has the square of the differences of the
+  // original values from the original mean
+  // 4. calculate the mean of the squared differences we currently have
+  mean = calculateMean(numValues, values);
+
+  // 5. final result is the square root of the mean of the squared differences
+  return sqrt(mean);
+}
